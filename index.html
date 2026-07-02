@@ -28,10 +28,13 @@
 
         <!-- HERO SECTION -->
         <header id="home" class="hero">
-            <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>PUP CURA</h1>
-                <h2>Helping You Raise<br />Happy & Healthy Dogs</h2>
+                <h2>
+                    Helping You Raise<br />
+                    <span class="highlight">Happy</span> &
+                    <span class="highlight">Healthy</span> Dogs
+                </h2>
                 <p>
                     Practical guidance on training,<br />nutrition, health, and
                     daily care.
@@ -297,7 +300,7 @@
 
         <script>
             // Simple smooth scroll for nav links
-            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            document.querySelectorAll('a[href^=";#";]').forEach((anchor) => {
                 anchor.addEventListener("click", function (e) {
                     e.preventDefault();
                     const target = document.querySelector(
