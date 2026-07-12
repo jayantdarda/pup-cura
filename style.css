@@ -104,6 +104,63 @@
     font-display: swap;
 }
 
+/* === MONTSERRAT — Brand Accent === */
+@font-face {
+    font-family: "Montserrat";
+    src: url("Monstserrat WOFF/Montserrat-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("Monstserrat WOFF/Montserrat-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("Monstserrat WOFF/Montserrat-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("Monstserrat WOFF/Montserrat-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("Monstserrat WOFF/Montserrat-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("Monstserrat WOFF/Montserrat-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("Monstserrat WOFF/Montserrat-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* === CSS VARIABLES === */
 :root {
     --porcelain: #fbfef9;
@@ -115,6 +172,7 @@
     /* Font stack */
     --font-primary: "Mosvita", "Helvetica Neue", sans-serif;
     --font-display: "Blanco", "Mosvita", serif;
+    --font-accent: "Montserrat", "Mosvita", sans-serif;
     --font-body: "Satoshi", -apple-system, sans-serif;
 
     /* Spacing */
@@ -217,10 +275,10 @@ body {
 }
 
 .brand {
-    font-family: var(--font-display);
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.18em;
+    font-family: var(--font-accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--onyx);
     position: relative;
@@ -804,10 +862,10 @@ body {
 }
 
 .footer-brand .footer-logo {
-    font-family: var(--font-display);
+    font-family: var(--font-accent);
     font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.15em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     margin-bottom: var(--space-sm);
     display: block;
