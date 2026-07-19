@@ -452,7 +452,7 @@
         <script>
             // ============================================================
             // PRE-LOADER
-            // Counter ramps 0 -> ~90, mirrors letsplayfight.com behavior.
+            // Counter ramps 0 -> 99, then unwinds the curtain.
             // ============================================================
             (function () {
                 const loader = document.getElementById("pageLoader");
@@ -469,42 +469,50 @@
                     if (t < 0.6) return 70 + 10 * ((t - 0.45) / 0.15);
                     if (t < 0.75) return 80;
                     if (t < 0.9) return 80 + 10 * ((t - 0.75) / 0.15);
-                    return 90 + 9 * ((t - 0.9) / 0.1);
+                    return 90 + 9 * ((t - 0.9) / 0.1); // reaches 99 by t=1
                 };
 
                 const ease = (n, target) => n + 0.09 * (target - n);
 
-                function tick(now) {
-                    const t = Math.min((now - start) / DURATION, 1);
-                    const target = schedule(t);
-                    shown = ease(shown, Math.min(target, 99));
-                    numEl.textContent = Math.round(shown);
-                    if (shown < 99) {
-                        requestAnimationFrame(tick);
-                    } else {
-                        setTimeout(finish, 250);
-                    }
-                }
-
                 function finish() {
+                    if (loader.dataset.finished === "1") return;
+                    loader.dataset.finished = "1";
+                    numEl.textContent = "100";
                     loader.classList.add("is-done");
                     document.body.classList.add("is-loaded");
                     setTimeout(() => {
                         loader.setAttribute("aria-hidden", "true");
                         loader.style.visibility = "hidden";
                         loader.style.pointerEvents = "none";
-                    }, 1100);
+                    }, 1200);
                 }
 
-                if (document.readyState === "complete") {
-                    requestAnimationFrame(tick);
-                } else {
-                    window.addEventListener(
-                        "load",
-                        () => requestAnimationFrame(tick),
-                        { once: true },
-                    );
+                function tick(now) {
+                    if (loader.dataset.finished === "1") return;
+                    const t = Math.min((now - start) / DURATION, 1);
+                    const target = schedule(t);
+                    shown = ease(shown, Math.min(target, 99));
+                    const displayed = Math.round(shown);
+                    numEl.textContent = displayed;
+                    // Compare on the ROUNDED value so we always finish by ~t=1
+                    if (displayed < 99) {
+                        requestAnimationFrame(tick);
+                    } else {
+                        setTimeout(finish, 250);
+                    }
                 }
+
+                const startTick = () => requestAnimationFrame(tick);
+
+                if (document.readyState === "complete") {
+                    startTick();
+                } else {
+                    window.addEventListener("load", startTick, { once: true });
+                }
+
+                // Safety net: never let the curtain sit longer than 4s,
+                // even if a font or asset stalls the load event.
+                setTimeout(finish, 4000);
             })();
 
             // ============================================================
