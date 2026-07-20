@@ -87,22 +87,35 @@
             </div>
         </div>
 
+        <!-- FILM GRAIN OVERLAY (whole page) -->
+        <canvas class="grain" aria-hidden="true"></canvas>
+
+        <!-- SCROLL PROGRESS INDICATOR -->
+        <div class="progress" aria-hidden="true">0%</div>
+
         <!-- HERO SECTION -->
         <header id="home" class="hero">
-            <div class="hero-ornament hero-ornament-1"></div>
-            <div class="hero-ornament hero-ornament-2"></div>
+            <div class="hero__media">
+                <img
+                    src="https://images.unsplash.com/photo-1587300003388-59208e96d7bff?w=1920&q=80&auto=format&fit=crop"
+                    alt=""
+                    loading="eager"
+                    decoding="async"
+                />
+                <div class="hero__overlay"></div>
+            </div>
             <div class="hero-content">
+                <p class="hero__eyebrow">Available worldwide</p>
                 <h1>PUP CURA</h1>
-                <h2>
-                    Helping You Raise<br />
-                    <span class="highlight">Happy</span> &
-                    <span class="highlight">Healthy</span> Dogs
-                </h2>
-                <p>
-                    Practical guidance on training, nutrition, health, and daily
-                    care.
+                <p class="hero__sub">care, in motion</p>
+                <p class="hero__lede">
+                    Field-tested guidance for dogs that run, work, and play hard.
                 </p>
                 <a href="#about" class="btn-primary">Explore Guides</a>
+            </div>
+            <div class="hero__scroll" aria-hidden="true">
+                <span>Scroll Down</span>
+                <span class="hero__scroll-line"></span>
             </div>
         </header>
 
@@ -168,6 +181,77 @@
                         <h3>Daily Care</h3>
                         <span class="card-arrow">&#x2197;</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEHIND THE SCENES — asymmetric 3D-style image grid -->
+        <section id="bts" class="bts section-anim">
+            <div class="container">
+                <p class="section-label">Behind the scenes</p>
+                <h2 class="section-title">
+                    We work with dogs & their people, worldwide.
+                </h2>
+                <div class="grid-asym">
+                    <figure class="img-wrap a">
+                        <img
+                            src="https://images.unsplash.com/photo-1518717758536-85ae4c4b8dd4?w=1200&q=80&auto=format&fit=crop"
+                            alt="Golden retriever portrait in natural light"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <figcaption>Field portrait</figcaption>
+                    </figure>
+                    <figure class="img-wrap b">
+                        <img
+                            src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=1600&q=80&auto=format&fit=crop"
+                            alt="Dog running in open field"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <figcaption>Run, work, play</figcaption>
+                    </figure>
+                    <figure class="img-wrap c">
+                        <img
+                            src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&q=80&auto=format&fit=crop"
+                            alt="Dog eye macro close up"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <figcaption>In the details</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- HORIZONTAL PINNED GALLERY — services in motion -->
+        <section class="hscroll">
+            <div class="hscroll__track">
+                <div class="hscroll__intro">
+                    <p class="section-label">In motion</p>
+                    <h2 class="section-title">Care, as it happens.</h2>
+                </div>
+                <div class="hscroll__strip">
+                    <figure class="hscroll__item">
+                        <img src="https://images.unsplash.com/photo-1605861317722-9fd4a887f5b5?w=1200&q=80&auto=format&fit=crop" alt="Training session" loading="lazy" decoding="async" />
+                        <figcaption>Training</figcaption>
+                    </figure>
+                    <figure class="hscroll__item">
+                        <img src="https://images.unsplash.com/photo-1583334173892-977d6831c9a7?w=1200&q=80&auto=format&fit=crop" alt="Dog being groomed" loading="lazy" decoding="async" />
+                        <figcaption>Grooming</figcaption>
+                    </figure>
+                    <figure class="hscroll__item">
+                        <img src="https://images.unsplash.com/photo-1625407242328-862b1520c261?w=1200&q=80&auto=format&fit=crop" alt="Vet examination" loading="lazy" decoding="async" />
+                        <figcaption>Vet care</figcaption>
+                    </figure>
+                    <figure class="hscroll__item">
+                        <img src="https://images.unsplash.com/photo-1548199973-5f5d6d4c660d?w=1200&q=80&auto=format&fit=crop" alt="Two dogs outdoors" loading="lazy" decoding="async" />
+                        <figcaption>Socialization</figcaption>
+                    </figure>
+                    <figure class="hscroll__item">
+                        <img src="https://images.unsplash.com/photo-1601760562994-2a2b3cad0c2a?w=1200&q=80&auto=format&fit=crop" alt="Dog resting" loading="lazy" decoding="async" />
+                        <figcaption>Rest</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -590,4 +674,3 @@
         </script>
     </body>
 </html>
->>>>>>> b093eb9ac56d2c635d0aac6f4531734e3205b48b
