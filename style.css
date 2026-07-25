@@ -1238,12 +1238,6 @@ body.is-menu-open .progress { opacity: 0; transition: opacity 0.3s ease; }
     position: relative;
 }
 
-.training + .nutrition,
-.nutrition + .photo-break + .health,
-.health + .daily-care {
-    /* sections separated by negative space, not borders */
-}
-
 /* Section opener — eyebrow + giant serif title + italic intro */
 .section-opener {
     display: grid;
@@ -2140,12 +2134,44 @@ body.is-loaded .cursor-dot {
     }
 
     .guide-card.wide {
-        grid-column: auto;
+        grid-column: 1;
+        grid-template-columns: 1fr;
+    }
+
+    .guide-card.wide .guide-card__media {
+        min-height: 280px;
     }
 
     .contact .container {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
+    }
+
+    /* Section opener stacks: number on top, title below */
+    .section-opener {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .section-num {
+        grid-row: auto;
+        grid-column: 1;
+        padding-top: 0;
+    }
+    .section-title-lg,
+    .section-intro {
+        grid-column: 1;
+    }
+
+    /* Stats stack */
+    .stats__row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Photo break shorter on mobile */
+    .photo-break {
+        height: 70vh;
+        min-height: 420px;
     }
 }
 
@@ -2166,6 +2192,12 @@ body.is-loaded .cursor-dot {
     .hscroll__strip { animation: none !important; transform: none !important; }
     .section-anim { opacity: 1 !important; transform: none !important; }
     .img-wrap img { transform: none !important; }
-    .img-wrap::before { display: none; }
+    .img-wrap::before,
+    .guide-card__media::before { display: none; }
+    .guide-card__media img,
+    .photo-break img { animation: none !important; transform: none !important; }
+    .section-opener .section-title-lg { animation: none !important; transform: none !important; }
+    [data-magnetic] { transition: none !important; transform: none !important; }
+    .cursor-dot { display: none !important; }
     canvas.grain { display: none; }
 }
