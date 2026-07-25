@@ -1515,7 +1515,7 @@ body.is-menu-open .progress { opacity: 0; transition: opacity 0.3s ease; }
     font-family: var(--font-serif);
 }
 
-/* === CONTACT SECTION ===
+/* === CONTACT SECTION === */
 .contact {
     padding: var(--space-3xl) 0;
     background: var(--onyx);
@@ -1524,32 +1524,64 @@ body.is-menu-open .progress { opacity: 0; transition: opacity 0.3s ease; }
 
 .contact .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-    align-items: start;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(3rem, 8vw, 8rem);
+    align-items: end;
 }
 
-.contact-info h2 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
-    margin-bottom: var(--space-md);
+.contact__intro {
+    max-width: 36rem;
 }
 
-.contact-info p {
+.contact__eyebrow {
+    font-family: var(--font-oswald);
+    font-weight: 500;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: rgba(251, 254, 249, 0.55);
+    margin-bottom: 1.5rem;
+}
+
+.contact__title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.75rem, 6vw, 5.5rem);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0 0 1.5rem;
+    color: var(--porcelain);
+}
+
+.contact__copy {
     font-family: var(--font-body);
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.7;
     color: rgba(251, 254, 249, 0.6);
-    max-width: 400px;
+    max-width: 36ch;
+    margin: 0 0 0.75rem;
+}
+
+.contact__email a {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    color: var(--porcelain);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(251, 254, 249, 0.4);
+    transition: text-decoration-color 0.3s ease;
+}
+
+.contact__email a:hover {
+    text-decoration-color: var(--porcelain);
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: 1.5rem;
 }
 
 .form-group {
@@ -1559,27 +1591,29 @@ body.is-menu-open .progress { opacity: 0; transition: opacity 0.3s ease; }
 .form-group label {
     display: block;
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: rgba(251, 254, 249, 0.5);
-    margin-bottom: var(--space-xs);
+    letter-spacing: 0.18em;
+    color: rgba(251, 254, 249, 0.45);
+    margin-bottom: 0.6rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem 0;
-    border: none;
+    padding: 0.75rem 0;
+    border: 0;
     border-bottom: 1px solid rgba(251, 254, 249, 0.2);
     background: transparent;
     color: var(--porcelain);
-    font-family: var(--font-primary);
+    font-family: var(--font-body);
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    line-height: 1.5;
     outline: none;
     border-radius: 0;
+    transition: border-color 0.3s ease;
+    resize: none;
 }
 
 .form-group input:focus,
@@ -1590,19 +1624,33 @@ body.is-menu-open .progress { opacity: 0; transition: opacity 0.3s ease; }
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: rgba(251, 254, 249, 0.3);
+    font-style: italic;
 }
 
-.contact-form .btn-primary {
-    margin-top: var(--space-md);
+.btn-submit {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 2rem;
     background: var(--porcelain);
     color: var(--onyx);
     border-color: var(--porcelain);
-    align-self: flex-start;
 }
 
-.contact-form .btn-primary:hover {
+.btn-submit:hover {
     background: transparent;
     color: var(--porcelain);
+}
+
+.btn-submit svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: transform 0.4s var(--ease-out);
+}
+
+.btn-submit:hover svg {
+    transform: translateX(6px);
 }
 
 /* === FOOTER (letsplayfight-inspired) === */
@@ -1844,6 +1892,169 @@ body.is-menu-open .progress { opacity: 0; transition: opacity 0.3s ease; }
 .highlight {
     color: var(--onyx);
     opacity: 0.4;
+}
+
+/* ===========================================================
+   MANIFESTO — one bold sentence, lots of negative space
+   =========================================================== */
+.manifesto {
+    padding: clamp(6rem, 14vw, 14rem) 0;
+    background: var(--porcelain);
+    text-align: left;
+}
+
+.manifesto__eyebrow {
+    font-family: var(--font-oswald);
+    font-weight: 500;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--muted);
+    margin-bottom: 2rem;
+}
+
+.manifesto__title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--onyx);
+    max-width: 18ch;
+    margin: 0;
+    text-wrap: balance;
+}
+
+.manifesto__title .serif-italic {
+    color: var(--muted);
+}
+
+/* ===========================================================
+   STATS STRIP — count-up numbers
+   =========================================================== */
+.stats {
+    padding: clamp(3rem, 6vw, 6rem) 0;
+    background: var(--onyx);
+    color: var(--porcelain);
+    border-top: 1px solid rgba(251, 254, 249, 0.08);
+    border-bottom: 1px solid rgba(251, 254, 249, 0.08);
+}
+
+.stats__row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.stat__num {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--porcelain);
+    font-variant-numeric: tabular-nums;
+}
+
+.stat__label {
+    font-family: var(--font-oswald);
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(251, 254, 249, 0.55);
+}
+
+/* ===========================================================
+   UI POLISH — scrollbar, selection, focus rings
+   =========================================================== */
+::selection {
+    background: var(--onyx);
+    color: var(--porcelain);
+}
+
+/* Custom scrollbar — wide enough to feel intentional, slim enough to vanish */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--porcelain);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(10, 10, 11, 0.15);
+    border: 3px solid var(--porcelain);
+    border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(10, 10, 11, 0.3);
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(10, 10, 11, 0.25) var(--porcelain);
+}
+
+/* Visible focus ring for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 1px solid var(--onyx);
+    outline-offset: 4px;
+    border-radius: 1px;
+}
+
+.contact a:focus-visible,
+.contact button:focus-visible,
+.contact input:focus-visible,
+.contact textarea:focus-visible,
+.footer a:focus-visible,
+.footer button:focus-visible {
+    outline-color: var(--porcelain);
+}
+
+/* ===========================================================
+   MAGNETIC HOVER — buttons & nav links get pulled toward cursor.
+   JS reads [data-magnetic] and translates the element.
+   =========================================================== */
+[data-magnetic] {
+    transition: transform 0.4s var(--ease-out);
+    will-change: transform;
+}
+
+/* Cursor follower (optional, very subtle) */
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--onyx);
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out),
+        background 0.3s ease, opacity 0.3s ease;
+    mix-blend-mode: difference;
+    background: #fff;
+    opacity: 0;
+}
+
+body.is-loaded .cursor-dot {
+    opacity: 0.85;
+}
+
+@media (pointer: coarse) {
+    .cursor-dot { display: none; }
+    [data-magnetic] { transition: none; }
 }
 
 /* === RESPONSIVE === */
