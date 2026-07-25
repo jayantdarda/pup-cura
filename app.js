@@ -148,7 +148,7 @@
         (Fallback for browsers without animation-timeline: view())
   --------------------------------------------------------------- */
   (function imageReveal() {
-    const wraps = document.querySelectorAll(".img-wrap");
+    const wraps = document.querySelectorAll(".img-wrap, .guide-card");
     if (!wraps.length) return;
 
     if (!("IntersectionObserver" in window)) {
