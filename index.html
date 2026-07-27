@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PUP CURA | Field-tested dog care, in motion</title>
+        <title>PUP CURA | Field notes on dog care</title>
         <meta name="description" content="PUP CURA is a field-tested guide for dogs that run, work, and play hard. Training, nutrition, health, and daily care from people who do it every day." />
 
         <!-- Open Graph / social share -->
-        <meta property="og:title" content="PUP CURA | Field-tested dog care, in motion" />
+        <meta property="og:title" content="PUP CURA | Field notes on dog care" />
         <meta property="og:description" content="Field-tested guidance for dogs that run, work, and play hard." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1587300003388-59208e96d7bff?w=1200&h=630&q=80&auto=format&fit=crop" />
+        <meta property="og:image" content="" /><!-- TODO: replace with a real 1200x630 OG image -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1587300003388-59208e96d7bff?w=1200&h=630&q=80&auto=format&fit=crop" />
+        <meta name="twitter:image" content="" /><!-- TODO: replace with a real 1200x630 OG image -->
 
         <!-- Favicon — hairline paw -->
         <link
@@ -22,14 +22,12 @@
         />
 
         <link rel="stylesheet" href="style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;1,300&family=Oswald:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-            rel="stylesheet"
-        />
+        <!-- Local font stack: Mosvita, Blanco, Satoshi, Montserrat (WOFFs already in project) -->
     </head>
     <body>
+        <!-- Skip link for keyboard / screen-reader users -->
+        <a href="#main" class="skip-link">Skip to content</a>
+
         <!-- PRE-LOADER -->
         <div class="page-loader" id="pageLoader" aria-hidden="true">
             <div class="page-loader__bg"></div>
@@ -113,18 +111,13 @@
         <!-- HERO SECTION -->
         <header id="home" class="hero">
             <div class="hero__media">
-                <img
-                    src="https://images.unsplash.com/photo-1587300003388-59208e96d7bff?w=1920&q=80&auto=format&fit=crop"
-                    alt=""
-                    loading="eager"
-                    decoding="async"
-                />
+                <!-- Hero image slot — fill with a striking dog portrait, shallow DOF, natural light -->
+                <div class="media-slot hero__slot" data-src="" data-alt=""></div>
                 <div class="hero__overlay"></div>
             </div>
             <div class="hero-content">
-                <p class="hero__eyebrow">Available worldwide</p>
                 <h1>PUP CURA</h1>
-                <p class="hero__sub">care, in motion</p>
+                <p class="hero__sub">field notes on dog care</p>
                 <p class="hero__lede">
                     Field-tested guidance for dogs that run, work, and play hard.
                 </p>
@@ -157,154 +150,64 @@
         <!-- MANIFESTO — one bold sentence, lots of negative space -->
         <section class="manifesto reveal">
             <div class="container">
-                <p class="manifesto__eyebrow">01 — Why we exist</p>
+                <p class="manifesto__eyebrow"><span class="eyebrow-dot"></span>why we exist</p>
                 <h2 class="manifesto__title">
                     Care is not a checklist. <span class="serif-italic">It is a relationship, repeated daily.</span>
                 </h2>
             </div>
         </section>
 
-        <!-- STATS STRIP — numbers count up on reveal -->
-        <section class="stats reveal">
-            <div class="container">
-                <div class="stats__row">
-                    <div class="stat">
-                        <span class="stat__num" data-target="12">0</span>
-                        <span class="stat__label">Years in the field</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__num" data-target="40">0</span>
-                        <span class="stat__label">Breeds worked with</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__num" data-target="3000" data-suffix="+">0</span>
-                        <span class="stat__label">Dogs & their people</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- ABOUT SECTION -->
         <section id="about" class="about">
             <div class="container">
-                <h2>What is Pup Cura?</h2>
-                <p>
-                    Pup Cura is an educational platform created to help dog
-                    owners understand their pets' needs and improve their
-                    overall quality of life.
-                </p>
-                <p>
-                    Whether you are a first time owner or an experienced pet
-                    parent, Pup Cura provides simple and accessible guidance.
-                </p>
-            </div>
-        </section>
-
-        <!-- DOG CARE CATEGORIES -->
-        <section class="categories">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-label">What We Cover</p>
-                    <h2 class="section-title">Explore Topics</h2>
-                </div>
-                <div class="category-grid">
-                    <div class="category-card">
-                        <span class="icon">&#x1F43E;</span>
-                        <h3>Training</h3>
-                        <span class="card-arrow">&#x2197;</span>
-                    </div>
-                    <div class="category-card">
-                        <span class="icon">&#x1F43E;</span>
-                        <h3>Nutrition</h3>
-                        <span class="card-arrow">&#x2197;</span>
-                    </div>
-                    <div class="category-card">
-                        <span class="icon">&#x1F43E;</span>
-                        <h3>Health</h3>
-                        <span class="card-arrow">&#x2197;</span>
-                    </div>
-                    <div class="category-card">
-                        <span class="icon">&#x1F43E;</span>
-                        <h3>Daily Care</h3>
-                        <span class="card-arrow">&#x2197;</span>
-                    </div>
+                <div class="about__eyebrow"><span class="eyebrow-dot"></span>about</div>
+                <h2 class="about__title">What is Pup Cura?</h2>
+                <div class="about__body">
+                    <p>
+                        Pup Cura started the way most good things start &mdash; with one dog we couldn't quite figure out.
+                    </p>
+                    <p>
+                        What you'll find here is what we learned since: short, daily, and earned the hard way. No checklists, no absolutes &mdash; just field notes from people who do this every day.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- BEHIND THE SCENES — asymmetric 3D-style image grid -->
-        <section id="bts" class="bts section-anim">
-            <div class="container">
-                <p class="section-label">Behind the scenes</p>
-                <h2 class="section-title">
-                    We work with dogs & their people, worldwide.
-                </h2>
-                <div class="grid-asym">
-                    <figure class="img-wrap a">
-                        <img
-                            src="https://images.unsplash.com/photo-1518717758536-85ae4c4b8dd4?w=1200&q=80&auto=format&fit=crop"
-                            alt="Golden retriever portrait in natural light"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                        <figcaption>Field portrait</figcaption>
-                    </figure>
-                    <figure class="img-wrap b">
-                        <img
-                            src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=1600&q=80&auto=format&fit=crop"
-                            alt="Dog running in open field"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                        <figcaption>Run, work, play</figcaption>
-                    </figure>
-                    <figure class="img-wrap c">
-                        <img
-                            src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&q=80&auto=format&fit=crop"
-                            alt="Dog eye macro close up"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                        <figcaption>In the details</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <!-- HORIZONTAL PINNED GALLERY — services in motion -->
+        <!-- "WHAT WE COVER" — horizontal-pinned gallery (the old BTS is gone; this is the new opening) -->
         <section class="hscroll">
             <div class="hscroll__track">
                 <div class="hscroll__intro">
-                    <p class="section-label">In motion</p>
-                    <h2 class="section-title">Care, as it happens.</h2>
+                    <p class="section-label"><span class="eyebrow-dot"></span>what we cover</p>
+                    <h2 class="section-title">Care,<br /><span class="serif-italic">as it happens.</span></h2>
                 </div>
                 <div class="hscroll__strip">
+                    <!-- each .hscroll__item is a placeholder slot. Fill data-src with a real image URL; data-alt with a short alt text. -->
                     <figure class="hscroll__item">
-                        <img src="https://images.unsplash.com/photo-1605861317722-9fd4a887f5b5?w=1200&q=80&auto=format&fit=crop" alt="Training session" loading="lazy" decoding="async" />
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Training"></div>
                         <figcaption>Training</figcaption>
                     </figure>
                     <figure class="hscroll__item">
-                        <img src="https://images.unsplash.com/photo-1583334173892-977d6831c9a7?w=1200&q=80&auto=format&fit=crop" alt="Dog being groomed" loading="lazy" decoding="async" />
-                        <figcaption>Grooming</figcaption>
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Nutrition"></div>
+                        <figcaption>Nutrition</figcaption>
                     </figure>
                     <figure class="hscroll__item">
-                        <img src="https://images.unsplash.com/photo-1625407242328-862b1520c261?w=1200&q=80&auto=format&fit=crop" alt="Vet examination" loading="lazy" decoding="async" />
-                        <figcaption>Vet care</figcaption>
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Health"></div>
+                        <figcaption>Health</figcaption>
                     </figure>
                     <figure class="hscroll__item">
-                        <img src="https://images.unsplash.com/photo-1548199973-5f5d6d4c660d?w=1200&q=80&auto=format&fit=crop" alt="Two dogs outdoors" loading="lazy" decoding="async" />
-                        <figcaption>Socialization</figcaption>
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Daily care"></div>
+                        <figcaption>Daily care</figcaption>
                     </figure>
                     <figure class="hscroll__item">
-                        <img src="https://images.unsplash.com/photo-1601760562994-2a2b3cad0c2a?w=1200&q=80&auto=format&fit=crop" alt="Dog resting" loading="lazy" decoding="async" />
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Rest"></div>
                         <figcaption>Rest</figcaption>
                     </figure>
                 </div>
             </div>
         </section>
 
-        <!-- TRAINING GUIDE SECTION -->
-        <section id="training" class="training">
+        <!-- TRAINING — full-screen section -->
+        <section id="training" class="topic">
             <div class="container">
                 <div class="section-opener reveal">
                     <p class="section-num">02</p>
