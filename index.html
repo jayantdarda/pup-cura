@@ -105,23 +105,27 @@
         <!-- FILM GRAIN OVERLAY (whole page) -->
         <canvas class="grain" aria-hidden="true"></canvas>
 
-        <!-- SCROLL PROGRESS INDICATOR -->
-        <div class="progress" aria-hidden="true">0%</div>
-
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION — full-bleed, editorial, no experimental pin. -->
         <header id="home" class="hero">
             <div class="hero__media">
                 <!-- Hero image slot — fill with a striking dog portrait, shallow DOF, natural light -->
                 <div class="media-slot hero__slot" data-src="" data-alt=""></div>
                 <div class="hero__overlay"></div>
+                <div class="hero__grain"></div>
             </div>
-            <div class="hero-content">
-                <h1>PUP CURA</h1>
-                <p class="hero__sub">field notes on dog care</p>
+            <div class="hero__inner">
+                <p class="hero__brand">PUP CURA</p>
+                <div class="hero__headline">
+                    <h1 class="hero__title">Field notes<br /><span class="serif-italic">on dog care.</span></h1>
+                </div>
                 <p class="hero__lede">
-                    Field-tested guidance for dogs that run, work, and play hard.
+                    Field-tested guidance for dogs that run, work, and play hard &mdash;
+                    kept short, kept honest, by people who do this every day.
                 </p>
-                <a href="#about" class="btn-primary" data-magnetic="0.35">Explore Guides</a>
+                <div class="hero__actions">
+                    <a href="#about" class="btn-primary" data-magnetic="0.35">Read the guides</a>
+                    <a href="#contact" class="hero__ghost">Ask a question</a>
+                </div>
             </div>
             <div class="hero__scroll" aria-hidden="true">
                 <span>Scroll Down</span>
@@ -179,32 +183,55 @@
             </div>
         </section>
 
-        <!-- "WHAT WE COVER" — horizontal-pinned gallery (the old BTS is gone; this is the new opening) -->
-        <section class="hscroll">
-            <div class="hscroll__track">
-                <div class="hscroll__intro">
-                    <p class="section-label"><span class="eyebrow-dot"></span>what we cover</p>
-                    <h2 class="section-title">Care,<br /><span class="serif-italic">as it happens.</span></h2>
-                </div>
-                <div class="hscroll__strip">
-                    <!-- each .hscroll__item is a placeholder slot. Fill data-src with a real image URL; data-alt with a short alt text. -->
-                    <figure class="hscroll__item">
+        <!-- "WHAT WE COVER" — auto-rotating landscape carousel.
+             Spins on its own at a medium constant speed; no scroll
+             interaction required. CSS-only (no JS). -->
+        <section class="rotate" aria-label="What we cover">
+            <div class="rotate__caption">
+                <p class="section-label"><span class="eyebrow-dot"></span>what we cover</p>
+                <h2 class="section-title">Care,<br /><span class="serif-italic">as it happens.</span></h2>
+            </div>
+            <div class="rotate__viewport">
+                <div class="rotate__strip">
+                    <!-- First copy — original set -->
+                    <figure class="rotate__item">
                         <div class="media-slot" data-src="" data-alt="" data-caption="Training"></div>
                         <figcaption>Training</figcaption>
                     </figure>
-                    <figure class="hscroll__item">
+                    <figure class="rotate__item">
                         <div class="media-slot" data-src="" data-alt="" data-caption="Nutrition"></div>
                         <figcaption>Nutrition</figcaption>
                     </figure>
-                    <figure class="hscroll__item">
+                    <figure class="rotate__item">
                         <div class="media-slot" data-src="" data-alt="" data-caption="Health"></div>
                         <figcaption>Health</figcaption>
                     </figure>
-                    <figure class="hscroll__item">
+                    <figure class="rotate__item">
                         <div class="media-slot" data-src="" data-alt="" data-caption="Daily care"></div>
                         <figcaption>Daily care</figcaption>
                     </figure>
-                    <figure class="hscroll__item">
+                    <figure class="rotate__item">
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Rest"></div>
+                        <figcaption>Rest</figcaption>
+                    </figure>
+                    <!-- Second copy — identical, makes the loop seamless -->
+                    <figure class="rotate__item" aria-hidden="true">
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Training"></div>
+                        <figcaption>Training</figcaption>
+                    </figure>
+                    <figure class="rotate__item" aria-hidden="true">
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Nutrition"></div>
+                        <figcaption>Nutrition</figcaption>
+                    </figure>
+                    <figure class="rotate__item" aria-hidden="true">
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Health"></div>
+                        <figcaption>Health</figcaption>
+                    </figure>
+                    <figure class="rotate__item" aria-hidden="true">
+                        <div class="media-slot" data-src="" data-alt="" data-caption="Daily care"></div>
+                        <figcaption>Daily care</figcaption>
+                    </figure>
+                    <figure class="rotate__item" aria-hidden="true">
                         <div class="media-slot" data-src="" data-alt="" data-caption="Rest"></div>
                         <figcaption>Rest</figcaption>
                     </figure>
@@ -389,32 +416,6 @@
 
         <!-- FOOTER -->
         <footer class="footer">
-            <div class="footer__top">
-                <div class="container">
-                    <ul class="footer__nav">
-                        <li>
-                            <a href="#about" class="footer__link" data-text="About">
-                                <span class="footer__link-text">About</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#training" class="footer__link" data-text="Training">
-                                <span class="footer__link-text">Training</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#health" class="footer__link" data-text="Health">
-                                <span class="footer__link-text">Health</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="footer__link" data-text="Contact">
-                                <span class="footer__link-text">Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <div class="footer__bottom">
                 <div class="container">
                     <div class="footer__row">
