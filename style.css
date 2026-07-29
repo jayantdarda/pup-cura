@@ -489,17 +489,17 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
-    align-items: end;
-    padding-top: calc(var(--nav-height) + 1.5rem);
+    align-items: center;
+    padding-top: var(--nav-height);
     padding-bottom: var(--space-xl);
 }
 
 .menu__col {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: var(--space-xl);
-    min-height: 100%;
+    max-height: 100%;
 }
 
 .menu__links {
@@ -605,7 +605,7 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
         linear-gradient(135deg, var(--onyx) 0%, rgba(10, 10, 11, 0.88) 100%);
     border: 1px solid rgba(251, 254, 249, 0.08);
     aspect-ratio: 16 / 9;
-    align-self: end;
+    align-self: center;
     width: 100%;
     min-height: 220px;
     height: auto;
@@ -645,16 +645,34 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
 
 body.is-loaded .side-label { opacity: 0.6; }
 
-.side-label--left { left: 1.5rem; }
+/* Right label uses the Rig face family (OTF); mirrors the left label
+   symmetrically so both sit the same distance from the page center. */
+.side-label--left {
+    left: 1.5rem;
+}
 
 .side-label--right {
     right: 1.5rem;
     transform: translateY(-50%) rotate(90deg);
+    font-family: "Rig Sans", "Montserrat", system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    color: var(--onyx);
+}
+
+/* @font-face for the side label only — OTF kept in the deep fonts folder */
+@font-face {
+    font-family: "Rig Sans";
+    src: url("Rig face family/fonts/fonnts.com-Rig_Sans_Semibold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 /* ===========================================================
-   HERO SECTION (podium.global-inspired)
-   Full-bleed media slot · film grain overlay · native scroll-pin
+   HERO SECTION — full-bleed editorial.
+   No experimental scroll-pin (that made the hero jump 100vh on load
+   in Chrome). Just a slow breathing background and centered copy.
    =========================================================== */
 .hero {
     position: relative;
@@ -664,26 +682,20 @@ body.is-loaded .side-label { opacity: 0.6; }
     justify-content: center;
     overflow: hidden;
     background: var(--onyx);
-    animation: hero-pin linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 100vh;
-}
-
-@keyframes hero-pin {
-    to { transform: translateY(100vh); }
+    color: var(--porcelain);
 }
 
 .hero__media {
     position: absolute;
-    inset: -5%;
+    inset: 0;
     z-index: 1;
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
+    overflow: hidden;
 }
 
 .hero__slot {
     width: 100%;
     height: 100%;
+    background: var(--onyx);
 }
 
 .hero__media img {
@@ -692,12 +704,13 @@ body.is-loaded .side-label { opacity: 0.6; }
     object-fit: cover;
     object-position: center 35%;
     filter: saturate(0.85) contrast(1.05);
-    animation: hero-scale 1.4s var(--ease-out) both;
+    /* Slow breathing — the only hero motion. Gated off below if reduce-motion. */
+    animation: ken-burns-hero 28s ease-in-out infinite alternate;
 }
 
-@keyframes hero-scale {
-    from { transform: scale(1.12); }
-    to   { transform: scale(1); }
+@keyframes ken-burns-hero {
+    0%   { transform: scale(1.05) translate(0, 0); }
+    100% { transform: scale(1.14) translate(-1.5%, -1%); }
 }
 
 .hero__overlay {
@@ -705,51 +718,78 @@ body.is-loaded .side-label { opacity: 0.6; }
     inset: 0;
     background:
         linear-gradient(180deg,
-            rgba(10, 10, 11, 0.45) 0%,
-            rgba(10, 10, 11, 0.15) 30%,
-            rgba(10, 10, 11, 0) 60%,
-            rgba(10, 10, 11, 0.55) 100%
+            rgba(10, 10, 11, 0.55) 0%,
+            rgba(10, 10, 11, 0.35) 30%,
+            rgba(10, 10, 11, 0.25) 60%,
+            rgba(10, 10, 11, 0.75) 100%
         );
 }
 
-.hero-content {
+/* Subtle vignette + grain layer that flatters the placeholder-slot
+   look when no image is loaded yet. */
+.hero__grain {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at center, transparent 40%, rgba(10, 10, 11, 0.45) 100%);
+    mix-blend-mode: multiply;
+}
+
+.hero__inner {
     position: relative;
     z-index: 3;
     text-align: center;
     color: var(--porcelain);
     padding: 0 1.5rem;
-    max-width: 90%;
+    max-width: 56rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.25rem, 2.2vw, 2rem);
 }
 
-.hero-content h1 {
+.hero__brand {
     font-family: var(--font-display);
-    font-size: clamp(3.5rem, 11vw, 9rem);
-    font-weight: 700;
-    line-height: 0.9;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    color: var(--porcelain);
-}
-
-.hero__sub {
-    font-family: var(--font-display);
-    font-style: italic;
+    font-size: 0.78rem;
     font-weight: 400;
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
-    color: rgba(251, 254, 249, 0.85);
-    margin-bottom: 2rem;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--sage);
+}
+
+.hero__headline { line-height: 0; }
+
+.hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 9vw, 7.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--porcelain);
+    margin: 0;
+    text-wrap: balance;
+}
+
+.hero__title .serif-italic {
+    color: rgba(251, 254, 249, 0.72);
 }
 
 .hero__lede {
     font-family: var(--font-body);
-    font-size: clamp(0.95rem, 1.3vw, 1.2rem);
+    font-size: clamp(0.95rem, 1.25vw, 1.15rem);
     font-weight: 400;
-    line-height: 1.6;
-    color: rgba(251, 254, 249, 0.7);
-    max-width: 36ch;
-    margin: 0 auto 2.5rem;
+    line-height: 1.65;
+    color: rgba(251, 254, 249, 0.72);
+    max-width: 42ch;
+    margin: 0 auto;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 0 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero .btn-primary {
@@ -759,8 +799,38 @@ body.is-loaded .side-label { opacity: 0.6; }
 }
 
 .hero .btn-primary:hover {
-    background: transparent;
+    background: var(--sage);
     color: var(--porcelain);
+    border-color: var(--sage);
+}
+
+.hero__ghost {
+    font-family: var(--font-accent);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--porcelain);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0.3rem;
+}
+
+.hero__ghost::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--sage);
+    transform-origin: left;
+    transform: scaleX(0.6);
+    transition: transform 0.4s var(--ease-out);
+}
+
+.hero__ghost:hover::after {
+    transform: scaleX(1);
 }
 
 .hero__scroll {
@@ -814,27 +884,7 @@ canvas.grain {
     opacity: 0.08;
 }
 
-/* ===========================================================
-   SCROLL PROGRESS — fixed bottom-left percentage
-   =========================================================== */
-.progress {
-    position: fixed;
-    bottom: 1.5rem;
-    left: 2rem;
-    z-index: 200;
-    font-family: var(--font-accent);
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--porcelain);
-    pointer-events: none;
-    mix-blend-mode: difference;
-}
-
-body.is-menu-open .progress {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+/* SCROLL PROGRESS — removed by request. No CSS here. */
 
 /* ===========================================================
    SCROLL-REVEAL — native animation-timeline: view()
@@ -913,95 +963,93 @@ body.is-menu-open .progress {
 }
 
 /* ===========================================================
-   HORIZONTAL PINNED GALLERY — the new "what we cover" opening
+   ROTATE — auto-rotating landscape carousel.
+   Spins on its own at a medium constant speed; no scroll interaction
+   required. CSS-only. The strip contains TWO identical sets of items,
+   so when the animation translates -50% it loops seamlessly.
    =========================================================== */
-.hscroll {
-    height: 300vh;
+.rotate {
     position: relative;
+    padding: clamp(4rem, 9vw, 9rem) 0;
     background: var(--porcelain);
-}
-
-.hscroll__track {
-    position: sticky;
-    top: 0;
-    height: 100vh;
     overflow: hidden;
-    display: flex;
-    align-items: center;
 }
 
-.hscroll__intro {
-    position: absolute;
-    top: 8rem;
-    left: 5%;
+.rotate__caption {
+    position: relative;
     z-index: 2;
-    pointer-events: none;
-}
-
-.hscroll__intro .section-label {
-    margin-bottom: 1rem;
-}
-
-.hscroll__intro .section-title {
-    color: var(--onyx);
-    max-width: 12ch;
-}
-
-.hscroll__strip {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto clamp(3rem, 5vw, 5rem);
     display: flex;
-    gap: 2rem;
-    padding: 0 5%;
-    padding-left: 40%;
-    height: 60vh;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.rotate__viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Pleasant landscape height — always visible, never needs scroll. */
+    height: clamp(280px, 50vh, 480px);
+    /* Fade the edges of the strip so items slide in/out gently. */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, var(--onyx) 6%, var(--onyx) 94%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, var(--onyx) 6%, var(--onyx) 94%, transparent 100%);
+}
+
+.rotate__strip {
+    display: flex;
+    gap: 1.5rem;
+    height: 100%;
+    padding: 0 1.5rem;
+    width: max-content;
     align-items: center;
     will-change: transform;
-    transform: translateX(0);
-    animation: hscroll-x linear both;
-    animation-timeline: scroll(root);
-    animation-range: 100vh 400vh;
+    animation: rotate-slide 48s linear infinite;
 }
 
-@keyframes hscroll-x {
-    to { transform: translateX(calc(-100% + 100vw)); }
+.rotate:hover .rotate__strip {
+    animation-play-state: paused;
 }
 
-.hscroll__item {
+@keyframes rotate-slide {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.rotate__item {
     position: relative;
     flex: 0 0 auto;
-    width: clamp(280px, 36vw, 520px);
-    aspect-ratio: 3 / 4;
+    /* Landscape orientation — wider than tall. */
+    width: clamp(360px, 44vw, 640px);
+    aspect-ratio: 16 / 10;
     overflow: hidden;
     background: var(--bone);
 }
 
-.hscroll__item .media-slot {
-    background: var(--bone);
+.rotate__item .media-slot {
+    height: 100%;
 }
 
-.hscroll__item img {
+.rotate__item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: saturate(0.85) contrast(1.05);
-    transition: transform 1.2s var(--ease-out);
 }
 
-.hscroll__item:hover img {
-    transform: scale(1.05);
-}
-
-.hscroll__item figcaption {
+.rotate__item figcaption {
     position: absolute;
-    left: 1.25rem;
-    bottom: 1.25rem;
+    left: 1rem;
+    bottom: 1rem;
     z-index: 2;
     font-family: var(--font-accent);
     font-weight: 500;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.22em;
     color: var(--porcelain);
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
 }
 
 /* === BUTTONS === */
@@ -1173,15 +1221,16 @@ body.is-menu-open .progress {
     text-wrap: balance;
 }
 
-/* text-rise — the signature section-title motion */
-.topic__title-inner {
-    display: inline-block;
-    overflow: hidden;
+/* text-rise — the signature section-title motion.
+   The parent .topic__title clips the inner span, which rises out
+   of its own box on reveal. NO ::after clone needed — that caused
+   the doubled-heading bug. */
+.topic__title {
+    overflow: visible;
 }
 
-.topic__title-inner::after {
-    content: attr(data-text);
-    display: block;
+.topic__title-inner {
+    display: inline-block;
 }
 
 .topic__intro.is-visible .topic__title-inner,
@@ -1190,8 +1239,8 @@ body.is-menu-open .progress {
 }
 
 @keyframes text-rise {
-    from { transform: translateY(105%); }
-    to   { transform: translateY(0); }
+    from { transform: translateY(40%); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
 }
 
 .topic__sub {
@@ -1747,25 +1796,13 @@ textarea:focus-visible,
         min-height: 240px;
     }
 
-    .hscroll { height: auto; }
-    .hscroll__track {
-        position: static;
-        height: auto;
+    .rotate__viewport { height: clamp(220px, 38vh, 320px); }
+    .rotate__strip {
+        /* Slightly faster on mobile to feel lively without lingering. */
+        animation-duration: 36s;
     }
-    .hscroll__intro {
-        position: static;
-        margin-bottom: var(--space-md);
-    }
-    .hscroll__strip {
-        overflow-x: auto;
-        padding-left: 5%;
-        animation: none;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        height: auto;
-    }
-    .hscroll__item {
-        scroll-snap-align: start;
+    .rotate__item {
+        width: clamp(280px, 70vw, 360px);
     }
 
     .contact .container {
@@ -1775,8 +1812,8 @@ textarea:focus-visible,
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: clamp(2.5rem, 14vw, 4rem);
+    .hero__title {
+        font-size: clamp(2.25rem, 13vw, 4rem);
     }
     .topic__points {
         grid-template-columns: 1fr;
@@ -1799,8 +1836,8 @@ textarea:focus-visible,
         scroll-behavior: auto !important;
     }
 
-    .hero,
-    .hscroll__strip,
+    .hero__media img,
+    .rotate__strip,
     .section-anim,
     .topic__title-inner,
     .reveal {
