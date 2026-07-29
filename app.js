@@ -1,6 +1,6 @@
 /* =================================================================
    PUP CURA — app.js
-   Preloader · Menu · Smooth scroll · Reveal · Film grain · Progress
+   Preloader · Menu · Smooth scroll · Reveal · Film grain
    · Magnetic · Topic text-rise · Media-slot loader · Contact form
  ================================================================= */
 
@@ -119,32 +119,6 @@
   })();
 
   /* ---------------------------------------------------------------
-     4. SCROLL PROGRESS INDICATOR — "0% → 100%" fixed corner
-  --------------------------------------------------------------- */
-  (function progress() {
-    const el = document.querySelector(".progress");
-    if (!el) return;
-    let ticking = false;
-    const update = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = max > 0 ? Math.round((window.scrollY / max) * 100) : 0;
-      el.textContent = pct + "%";
-      ticking = false;
-    };
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (!ticking) {
-          requestAnimationFrame(update);
-          ticking = true;
-        }
-      },
-      { passive: true },
-    );
-    update();
-  })();
-
-  /* ---------------------------------------------------------------
      5. SECTION REVEALS — fade-up on .reveal / .section-anim
         (Fallback for browsers without animation-timeline: view())
   --------------------------------------------------------------- */
@@ -236,41 +210,7 @@
   })();
 
   /* ---------------------------------------------------------------
-     8. HERO PARALLAX — JS fallback ONLY when the browser does not
-        support animation-timeline: scroll(root). In supporting
-        browsers, CSS already handles the pin/parallax natively, so
-        we do not bind a second scroll listener.
-  --------------------------------------------------------------- */
-  (function heroParallax() {
-    const hero = document.querySelector(".hero__media");
-    if (!hero) return;
-    const supportsScrollTimeline =
-      window.CSS && CSS.supports("animation-timeline: scroll(root)");
-    if (supportsScrollTimeline) return;
-
-    let ticking = false;
-    const update = () => {
-      const vh = window.innerHeight;
-      const y = Math.min(window.scrollY, vh);
-      const p = y / vh; // 0 → 1 across first viewport
-      hero.style.transform = `translate3d(0, ${p * 18}vh, 0) scale(${1 + p * 0.06})`;
-      ticking = false;
-    };
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (!ticking) {
-          requestAnimationFrame(update);
-          ticking = true;
-        }
-      },
-      { passive: true },
-    );
-    update();
-  })();
-
-  /* ---------------------------------------------------------------
-     9. MAGNETIC HOVER — elements with [data-magnetic] get pulled
+     8. MAGNETIC HOVER — elements with [data-magnetic] get pulled
         toward the cursor. Disabled on touch devices.
   --------------------------------------------------------------- */
   (function magnetic() {
@@ -304,7 +244,7 @@
   })();
 
   /* ---------------------------------------------------------------
-     10. MEDIA-SLOT LOADER — image placeholder system.
+     9. MEDIA-SLOT LOADER — image placeholder system.
          All <div class="media-slot" data-src="…" data-alt="…"> start
          as styled --bone placeholders. If data-src is a real URL, we
          inject an <img> inside. Otherwise leave the styled block.
@@ -334,7 +274,7 @@
   })();
 
   /* ---------------------------------------------------------------
-     11. CONTACT FORM — inline success state.
+     10. CONTACT FORM — inline success state.
          Suppress the default submit, run native validity, then write
          the "Thanks — we'll reply within 48 hours." message into
          #contactStatus and toggle .is-success for the CSS reveal.
