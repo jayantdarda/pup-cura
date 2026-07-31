@@ -652,12 +652,11 @@ body.is-loaded .side-label { opacity: 0.6; }
 }
 
 .side-label--right {
-    right: 1.5rem;
+    right: -2rem;
     transform: translateY(-50%) rotate(90deg);
     font-family: "Rig Sans", "Montserrat", system-ui, sans-serif;
     font-weight: 600;
     letter-spacing: 0.32em;
-    color: var(--onyx);
 }
 
 /* @font-face for the side label only — OTF kept in the deep fonts folder */
