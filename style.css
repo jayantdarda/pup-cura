@@ -691,11 +691,21 @@ body.is-loaded .side-label { opacity: 0.6; }
     overflow: hidden;
 }
 
-.hero__slot {
+.hero__slot,
+.hero .hero__slot {
     width: 100%;
     height: 100%;
     background: var(--onyx);
+    background-image: none;
+    border: 0;
 }
+
+/* Kill the inherited placeholder corner-mark pseudo */
+.hero__slot::after { content: none; }
+
+/* If JS later injects an <img> into the slot, the image covers the void,
+   but the underlying background must stay Onyx so letterboxing stays dark. */
+.hero__slot:has(img) { background: var(--onyx); }
 
 .hero__media img {
     width: 100%;
