@@ -316,11 +316,6 @@ body {
 
 .float { animation: float 4s ease-in-out infinite; }
 
-@keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
 /* ===========================================================
    PRE-LOADER — split wordmark + counter
    =========================================================== */
@@ -1082,33 +1077,6 @@ canvas.grain {
 .btn-primary:hover {
     background: transparent;
     color: var(--onyx);
-}
-
-/* === MARQUEE === */
-.marquee-section {
-    padding: var(--space-2xl) 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    overflow: hidden;
-    background: var(--porcelain);
-}
-
-.marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee 25s linear infinite;
-}
-
-.marquee-text {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 8vw, 6rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    white-space: nowrap;
-    padding-right: var(--space-lg);
-    color: var(--onyx);
-    opacity: 0.08;
-    user-select: none;
 }
 
 /* ===========================================================
