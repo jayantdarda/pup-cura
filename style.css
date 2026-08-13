@@ -308,6 +308,14 @@ body {
     line-height: 1.05;
 }
 
+/* === ANIMATIONS === */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+.float { animation: float 4s ease-in-out infinite; }
+
 /* ===========================================================
    PRE-LOADER — split wordmark + counter
    =========================================================== */
@@ -639,7 +647,7 @@ body.is-loaded .side-label { opacity: 0.6; }
 }
 
 .side-label--right {
-    right: 1.5rem;
+    right: -2rem;
     transform: translateY(-50%) rotate(90deg);
     font-family: "Rig Sans", "Montserrat", system-ui, sans-serif;
     font-weight: 600;
@@ -883,6 +891,27 @@ canvas.grain {
 /* SCROLL PROGRESS — removed by request. No CSS here. */
 
 /* ===========================================================
+   SCROLL-REVEAL — native animation-timeline: view()
+   =========================================================== */
+@keyframes section-rise {
+    from { opacity: 0; transform: translateY(2.5rem); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-anim {
+    opacity: 0;
+    transform: translateY(2.5rem);
+    animation: section-rise 0.9s var(--ease-out) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+}
+
+.section-anim.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===========================================================
    MEDIA-SLOT — image placeholder system (no <img> in HTML)
    Empty state: warm-neutral bone block, looks intentional.
    JS injects <img> when data-src is filled.
@@ -980,7 +1009,7 @@ canvas.grain {
     width: max-content;
     align-items: center;
     will-change: transform;
-    animation: rotate-slide 28s linear infinite;
+    animation: rotate-slide 48s linear infinite;
 }
 
 .rotate:hover .rotate__strip {
@@ -1126,46 +1155,10 @@ canvas.grain {
     position: relative;
 }
 
-/* Dark-topic variant — Nutrition and Daily Care already opt in with
-   .topic--dark in the HTML. This creates purposeful long-page rhythm. */
-.topic--dark {
-    background: var(--onyx);
+/* 
     color: var(--porcelain);
 }
-
-.topic--dark .topic__eyebrow {
-    color: var(--muted-light);
-}
-
-.topic--dark .topic__title {
-    color: var(--porcelain);
-}
-
-.topic--dark .topic__sub {
-    color: var(--sage);
-}
-
-.topic--dark .topic__copy p {
-    color: rgba(251, 254, 249, 0.75);
-}
-
-.topic--dark .topic__points {
-    border-color: rgba(251, 254, 249, 0.16);
-}
-
-.topic--dark .topic__points li {
-    color: rgba(251, 254, 249, 0.62);
-}
-
-.topic--dark .topic__image .media-slot {
-    background-color: rgba(251, 254, 249, 0.08);
-    background-image: repeating-linear-gradient(45deg, transparent 0 14px, rgba(251, 254, 249, 0.06) 14px 15px);
-    border-color: rgba(251, 254, 249, 0.18);
-}
-
-.topic--dark .topic__image .media-slot::after {
-    border-color: rgba(251, 254, 249, 0.55);
-}
+*/
 
 .topic__layout {
     display: grid;
@@ -1290,64 +1283,6 @@ canvas.grain {
     left: 0;
     color: var(--sage);
     opacity: 0.8;
-}
-
-/* ===========================================================
-   PHOTO BREAK — full-bleed editorial reset between topic blocks.
-   Works as an intentional Onyx fallback until an image is supplied.
-   =========================================================== */
-.photo-break {
-    position: relative;
-    min-height: clamp(28rem, 65vh, 48rem);
-    overflow: hidden;
-    background: var(--onyx);
-    color: var(--porcelain);
-}
-
-.photo-break figure,
-.photo-break__slot {
-    width: 100%;
-    height: 100%;
-}
-
-.photo-break figure {
-    position: absolute;
-    inset: 0;
-}
-
-.photo-break__slot,
-.photo-break .photo-break__slot {
-    background: var(--onyx);
-    background-image: none;
-    border: 0;
-}
-
-.photo-break__slot::after { content: none; }
-
-.photo-break__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(10, 10, 11, 0.75), rgba(10, 10, 11, 0.12) 70%, rgba(10, 10, 11, 0.45));
-}
-
-.photo-break figcaption {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    padding: 10%;
-}
-
-.photo-break__quote {
-    max-width: 14ch;
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 4.75rem);
-    font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    color: var(--porcelain);
-    text-wrap: balance;
 }
 
 /* ===========================================================
@@ -1516,7 +1451,7 @@ canvas.grain {
 }
 
 .footer__bottom {
-    padding: var(--space-3xl) 0 var(--space-md);
+    padding: var(--space-xl) 0 var(--space-md);
 }
 
 .footer__row {
@@ -1527,27 +1462,64 @@ canvas.grain {
     margin-bottom: var(--space-xl);
 }
 
-.footer__email {
-    display: inline-block;
-    align-self: end;
-    padding-bottom: 0.4rem;
+/* The signature "Let's chat." hover-swap link */
+.footer-phone-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    overflow: hidden;
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 4vw, 3.25rem);
-    font-style: italic;
+    font-size: clamp(1.5rem, 3.5vw, 2.75rem);
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.05;
     letter-spacing: -0.02em;
     color: var(--porcelain);
-    text-decoration: underline transparent;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.2em;
-    transition: color 0.35s ease, text-decoration-color 0.35s ease;
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: 0.4rem;
 }
 
-.footer__email:hover,
-.footer__email:focus-visible {
-    color: var(--porcelain);
-    text-decoration-color: var(--sage);
+.footer-phone-icon {
+    font-size: 0.9em;
+    opacity: 0.7;
+    transition: transform 0.4s var(--ease-out-quint);
+}
+
+.footer-phone-link:hover .footer-phone-icon {
+    transform: rotate(-12deg);
+}
+
+.footer-phone-text {
+    display: block;
+    transition:
+        transform 0.45s var(--ease-out-quint),
+        opacity 0.45s ease,
+        filter 0.45s ease;
+}
+
+.footer-phone-text--alt {
+    position: absolute;
+    left: 2.5rem;
+    bottom: 0;
+    transform: translateY(105%);
+    opacity: 0;
+    filter: blur(4px);
+    color: var(--sage);
+}
+
+.footer-phone-link:hover .footer-phone-text:not(.footer-phone-text--alt),
+.footer-phone-link:focus-visible .footer-phone-text:not(.footer-phone-text--alt) {
+    transform: translateY(-105%);
+    opacity: 0;
+    filter: blur(4px);
+}
+
+.footer-phone-link:hover .footer-phone-text--alt,
+.footer-phone-link:focus-visible .footer-phone-text--alt {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
 }
 
 /* Newsletter */
@@ -1646,6 +1618,12 @@ canvas.grain {
     color: var(--sage);
 }
 
+/* === HIGHLIGHT === */
+.highlight {
+    color: var(--onyx);
+    opacity: 0.4;
+}
+
 /* ===========================================================
    UI POLISH — scrollbar, selection, focus
    =========================================================== */
@@ -1654,15 +1632,24 @@ canvas.grain {
     color: var(--porcelain);
 }
 
-/* Keep scrolling functional without adding a visible browser scrollbar. */
-html {
-    scrollbar-width: none;
-}
-
 ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    display: none;
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--porcelain);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border: 3px solid var(--porcelain);
+    border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(10, 10, 11, 0.3);
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(10, 10, 11, 0.25) var(--porcelain);
 }
 
 a:focus-visible,
@@ -1725,8 +1712,8 @@ textarea:focus-visible,
 
     .rotate__viewport { height: clamp(220px, 38vh, 320px); }
     .rotate__strip {
-        /* Keep the same brisk-but-readable rhythm on smaller screens. */
-        animation-duration: 22s;
+        /* Slightly faster on mobile to feel lively without lingering. */
+        animation-duration: 36s;
     }
     .rotate__item {
         width: clamp(280px, 70vw, 360px);
@@ -1765,6 +1752,7 @@ textarea:focus-visible,
 
     .hero__media img,
     .rotate__strip,
+    .section-anim,
     .topic__title-inner,
     .reveal {
         animation: none !important;
@@ -1774,4 +1762,387 @@ textarea:focus-visible,
 
     [data-magnetic] { transform: none !important; }
     canvas.grain { display: none; }
+}
+
+/* ===========================================================
+   V2 MAIN REBUILD — field-journal / sports-editorial direction.
+   Scope intentionally stops before the menu and footer.
+   =========================================================== */
+
+/* Cover: a pure Onyx typographic opening. The media slot remains in
+   the markup for future art direction, but does not make an empty hero
+   look like an unfinished image placeholder. */
+.hero {
+    min-height: 100svh;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: clamp(7rem, 13vh, 10rem) 5% clamp(4rem, 8vh, 7rem);
+    background: var(--onyx);
+}
+
+.hero__media,
+.hero__overlay,
+.hero__grain {
+    display: none;
+}
+
+.hero__inner {
+    width: min(100%, 72rem);
+    max-width: none;
+    padding: 0;
+    align-items: flex-start;
+    text-align: left;
+    gap: clamp(1.1rem, 2.2vw, 2rem);
+}
+
+.hero__brand {
+    font-family: var(--font-accent);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    color: var(--sage);
+}
+
+.hero__headline {
+    line-height: 0.74;
+}
+
+.hero__title {
+    font-family: var(--font-primary);
+    font-size: clamp(5rem, 15.5vw, 14rem);
+    font-weight: 800;
+    line-height: 0.76;
+    letter-spacing: -0.085em;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+}
+
+.hero__title .serif-italic {
+    display: inline-block;
+    margin-left: clamp(2rem, 12vw, 11rem);
+    font-family: "Blanco", Georgia, serif;
+    font-size: 0.82em;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    color: var(--sage);
+}
+
+.hero__lede {
+    max-width: 34ch;
+    margin: clamp(0.75rem, 2vw, 1.75rem) 0 0;
+    font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+    color: rgba(251, 254, 249, 0.62);
+}
+
+.hero__actions {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+}
+
+.hero .btn-primary {
+    padding: 0.85rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--porcelain);
+    border-bottom: 1px solid var(--sage);
+}
+
+.hero .btn-primary:hover {
+    padding-left: 0.75rem;
+    background: transparent;
+    border-color: var(--porcelain);
+    color: var(--porcelain);
+}
+
+.hero__scroll {
+    right: 5%;
+    left: auto;
+    bottom: clamp(2rem, 5vh, 4rem);
+    transform: none;
+    align-items: flex-end;
+}
+
+/* Main type: structural Mosvita for statements, Blanco only for emphasis. */
+.manifesto {
+    padding: clamp(7rem, 16vw, 15rem) 0 clamp(5rem, 10vw, 10rem);
+}
+
+.manifesto__title {
+    max-width: 15ch;
+    font-family: var(--font-primary);
+    font-size: clamp(2.8rem, 7vw, 7.5rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+}
+
+.manifesto__title .serif-italic {
+    font-family: "Blanco", Georgia, serif;
+    font-weight: 400;
+    color: var(--sage-deep);
+}
+
+.about {
+    padding: clamp(5rem, 12vw, 11rem) 0;
+    border-top: 1px solid var(--border);
+    text-align: left;
+}
+
+.about .container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    column-gap: clamp(2rem, 8vw, 10rem);
+    row-gap: 1.5rem;
+    align-items: start;
+}
+
+.about__eyebrow {
+    grid-column: 1;
+    font-family: var(--font-accent);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.about h2 {
+    grid-column: 1;
+    max-width: 9ch;
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+}
+
+.about__body {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    max-width: 42rem;
+    padding-top: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.about p {
+    max-width: 46ch;
+    margin: 0 0 1.35rem;
+    font-size: clamp(1rem, 1.35vw, 1.25rem);
+    line-height: 1.65;
+    color: var(--onyx);
+}
+
+/* Coverage rail becomes a dark field-note index rather than another
+   pale block; its final impact will arrive with the editorial images. */
+.rotate {
+    padding: clamp(5rem, 10vw, 10rem) 0;
+    background: var(--onyx);
+    color: var(--porcelain);
+}
+
+.rotate .section-label {
+    color: rgba(251, 254, 249, 0.5);
+}
+
+.rotate .section-title {
+    max-width: 11ch;
+    font-family: var(--font-primary);
+    font-size: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.065em;
+}
+
+.rotate .section-title .serif-italic {
+    font-family: "Blanco", Georgia, serif;
+    font-weight: 400;
+    color: var(--sage);
+}
+
+.rotate__viewport {
+    height: clamp(250px, 42vw, 420px);
+    -webkit-mask-image: linear-gradient(90deg, transparent, var(--onyx) 5%, var(--onyx) 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, var(--onyx) 5%, var(--onyx) 95%, transparent);
+}
+
+.rotate__item {
+    width: clamp(340px, 42vw, 600px);
+    background: rgba(251, 254, 249, 0.08);
+}
+
+.rotate__item .media-slot {
+    background-color: rgba(251, 254, 249, 0.09);
+    background-image: repeating-linear-gradient(45deg, transparent 0 14px, rgba(251, 254, 249, 0.06) 14px 15px);
+    border-color: rgba(251, 254, 249, 0.16);
+}
+
+.rotate__item .media-slot::after {
+    border-color: rgba(251, 254, 249, 0.55);
+}
+
+/* Topic pages act like alternate field-journal spreads. */
+.topic {
+    padding: clamp(6rem, 12vw, 12rem) 0;
+    border-top: 1px solid var(--border);
+}
+
+.topic__layout {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(3rem, 8vw, 10rem);
+}
+
+.topic__intro {
+    grid-column: 1;
+    margin: 0;
+    position: sticky;
+    top: calc(var(--nav-height) + 2rem);
+}
+
+.topic__title {
+    font-family: var(--font-primary);
+    font-size: clamp(3.25rem, 7vw, 7.5rem);
+    font-weight: 700;
+    line-height: 0.86;
+    letter-spacing: -0.08em;
+}
+
+.topic__sub {
+    font-family: "Blanco", Georgia, serif;
+    color: var(--sage-deep);
+}
+
+.topic__body,
+.topic__points {
+    grid-column: 2;
+}
+
+.topic__body {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin: 0;
+}
+
+.topic__copy p {
+    max-width: 39ch;
+    font-size: clamp(1rem, 1.25vw, 1.2rem);
+}
+
+.topic__image {
+    max-width: 32rem;
+    justify-self: end;
+}
+
+.topic__points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+}
+
+/* The photo break is a real visual interval once its image arrives;
+   for now the quiet Onyx fallback still composes the quote. */
+.photo-break {
+    position: relative;
+    min-height: clamp(28rem, 65vh, 48rem);
+    overflow: hidden;
+    background: var(--onyx);
+    color: var(--porcelain);
+}
+
+.photo-break figure,
+.photo-break__slot {
+    width: 100%;
+    height: 100%;
+}
+
+.photo-break figure {
+    position: absolute;
+    inset: 0;
+}
+
+.photo-break__slot,
+.photo-break .photo-break__slot {
+    background: var(--onyx);
+    background-image: none;
+    border: 0;
+}
+
+.photo-break__slot::after { content: none; }
+
+.photo-break__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(10, 10, 11, 0.8), rgba(10, 10, 11, 0.12) 70%, rgba(10, 10, 11, 0.55));
+}
+
+.photo-break figcaption {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 10%;
+}
+
+.photo-break__quote {
+    max-width: 12ch;
+    font-family: "Blanco", Georgia, serif;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero__title {
+        font-size: clamp(4.2rem, 18vw, 8rem);
+    }
+
+    .hero__title .serif-italic {
+        margin-left: clamp(1rem, 8vw, 4rem);
+    }
+
+    .about .container,
+    .topic__layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about__body,
+    .about h2,
+    .about__eyebrow,
+    .topic__intro,
+    .topic__body,
+    .topic__points {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .topic__intro {
+        position: static;
+    }
+
+    .topic__image {
+        justify-self: stretch;
+        max-width: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero__scroll {
+        display: none;
+    }
+
+    .hero__title {
+        font-size: clamp(3.5rem, 20vw, 5.5rem);
+    }
+
+    .rotate__item {
+        width: 78vw;
+    }
 }
