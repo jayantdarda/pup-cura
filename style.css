@@ -1,14 +1,15 @@
 /* =========================================================
-   PUP CURA
-   Grand Minimalism Design System
-   Palette: Porcelain / Onyx / Sage (single accent)
-   Fonts: Mosvita (Display), Blanco (Brand italic), Satoshi (Body), Montserrat (Accent)
+   PUP CURA — style.css
+   Premium Editorial Dog-Care Field Journal
+   Palette : Porcelain · Onyx · Sage
+   Fonts   : Mosvita (Display) · Blanco (Brand Italic)
+             Satoshi (Body) · Montserrat (Accent)
    ========================================================= */
 
 /* === MOSVITA — Primary Display & Headings === */
 @font-face {
     font-family: "Mosvita";
-    src: url("Mosvita WOFF/Mosvita-Regular.woff") format("woff");
+    src: url("assets/Fonts/Mosvita WOFF/Mosvita-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -16,7 +17,7 @@
 
 @font-face {
     font-family: "Mosvita";
-    src: url("Mosvita WOFF/Mosvita-Light.woff") format("woff");
+    src: url("assets/Fonts/Mosvita WOFF/Mosvita-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -24,7 +25,7 @@
 
 @font-face {
     font-family: "Mosvita";
-    src: url("Mosvita WOFF/Mosvita-SemiBold.woff") format("woff");
+    src: url("assets/Fonts/Mosvita WOFF/Mosvita-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -32,7 +33,7 @@
 
 @font-face {
     font-family: "Mosvita";
-    src: url("Mosvita WOFF/Mosvita-Bold.woff") format("woff");
+    src: url("assets/Fonts/Mosvita WOFF/Mosvita-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -40,7 +41,7 @@
 
 @font-face {
     font-family: "Mosvita";
-    src: url("Mosvita WOFF/Mosvita-ExtraBold.woff") format("woff");
+    src: url("assets/Fonts/Mosvita WOFF/Mosvita-ExtraBold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -48,16 +49,16 @@
 
 @font-face {
     font-family: "Mosvita";
-    src: url("Mosvita WOFF/Mosvita-Black.woff") format("woff");
+    src: url("assets/Fonts/Mosvita WOFF/Mosvita-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
-/* === BLANCO — Brand & Hero Display === */
+/* === BLANCO — Brand Italic & Emphasis === */
 @font-face {
     font-family: "Blanco";
-    src: url("Blanco WOFF/BLANCO.woff") format("woff");
+    src: url("assets/Fonts/Blanco WOFF/BLANCO.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -65,7 +66,7 @@
 
 @font-face {
     font-family: "Blanco";
-    src: url("Blanco WOFF/Blancoliga.woff") format("woff");
+    src: url("assets/Fonts/Blanco WOFF/Blancoliga.woff") format("woff");
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -74,7 +75,7 @@
 /* === SATOSHI — Body & UI Text === */
 @font-face {
     font-family: "Satoshi";
-    src: url("Satoshi WOFF/Satoshi-Light.woff") format("woff");
+    src: url("assets/Fonts/Satoshi WOFF/Satoshi-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -82,7 +83,7 @@
 
 @font-face {
     font-family: "Satoshi";
-    src: url("Satoshi WOFF/Satoshi-Regular.woff") format("woff");
+    src: url("assets/Fonts/Satoshi WOFF/Satoshi-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -90,7 +91,7 @@
 
 @font-face {
     font-family: "Satoshi";
-    src: url("Satoshi WOFF/Satoshi-Medium.woff") format("woff");
+    src: url("assets/Fonts/Satoshi WOFF/Satoshi-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -98,16 +99,16 @@
 
 @font-face {
     font-family: "Satoshi";
-    src: url("Satoshi WOFF/Satoshi-Bold.woff") format("woff");
+    src: url("assets/Fonts/Satoshi WOFF/Satoshi-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
-/* === MONTSERRAT — Brand Accent === */
+/* === MONTSERRAT — Eyebrows & Accent Labels === */
 @font-face {
     font-family: "Montserrat";
-    src: url("Monstserrat WOFF/Montserrat-Light.woff") format("woff");
+    src: url("assets/Fonts/Monstserrat WOFF/Montserrat-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -115,7 +116,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("Monstserrat WOFF/Montserrat-Regular.woff") format("woff");
+    src: url("assets/Fonts/Monstserrat WOFF/Montserrat-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -123,7 +124,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("Monstserrat WOFF/Montserrat-Medium.woff") format("woff");
+    src: url("assets/Fonts/Monstserrat WOFF/Montserrat-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -131,7 +132,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("Monstserrat WOFF/Montserrat-SemiBold.woff") format("woff");
+    src: url("assets/Fonts/Monstserrat WOFF/Montserrat-SemiBold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -139,7 +140,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("Monstserrat WOFF/Montserrat-Bold.woff") format("woff");
+    src: url("assets/Fonts/Monstserrat WOFF/Montserrat-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -147,7 +148,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("Monstserrat WOFF/Montserrat-ExtraBold.woff") format("woff");
+    src: url("assets/Fonts/Monstserrat WOFF/Montserrat-ExtraBold.woff") format("woff");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -155,57 +156,70 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("Monstserrat WOFF/Montserrat-Black.woff") format("woff");
+    src: url("assets/Fonts/Monstserrat WOFF/Montserrat-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
-/* === CSS VARIABLES — locked 5-token palette === */
+/* === RIG SANS — Side labels only === */
+@font-face {
+    font-family: "Rig Sans";
+    src: url("assets/Fonts/Rig face family/fonts/fonnts.com-Rig_Sans_Semibold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* =========================================================
+   CSS CUSTOM PROPERTIES
+   ========================================================= */
 :root {
-    /* Palette — single accent (Sage). No amber, no brown. */
-    --porcelain: #fbfef9;
-    --onyx: #0a0a0b;
-    --sage: #7c8b6a;
-    --sage-deep: #4b5640;
-    --bone: #e8e6e0;
+    /* Core palette */
+    --porcelain:   #faf8f4;
+    --onyx:        #0c0b0a;
+    --sage:        #7c8b6a;
+    --sage-deep:   #4b5640;
+    --bone:        #e4dfd5;
+    --parchment:   #f2ede5;
 
-    /* Derived neutrals (alpha of onyx/porcelain — not new tokens) */
-    --muted: rgba(10, 10, 11, 0.5);
-    --border: rgba(10, 10, 11, 0.08);
-    --border-strong: rgba(10, 10, 11, 0.15);
-    --muted-light: rgba(251, 254, 249, 0.55);
+    /* Derived alpha tokens */
+    --muted:           rgba(12, 11, 10, 0.48);
+    --muted-light:     rgba(250, 248, 244, 0.55);
+    --border:          rgba(12, 11, 10, 0.07);
+    --border-strong:   rgba(12, 11, 10, 0.14);
+    --border-light:    rgba(250, 248, 244, 0.10);
+    --border-light-mid: rgba(250, 248, 244, 0.18);
 
-    /* Font stacks — local WOFFs only. No Google fallbacks. */
+    /* Font stacks — local WOFFs only */
     --font-primary: "Mosvita", "Helvetica Neue", sans-serif;
     --font-display: "Blanco", "Mosvita", Georgia, serif;
-    --font-accent: "Montserrat", "Mosvita", sans-serif;
-    --font-body: "Satoshi", -apple-system, "Segoe UI", sans-serif;
+    --font-accent:  "Montserrat", "Mosvita", sans-serif;
+    --font-body:    "Satoshi", -apple-system, "Segoe UI", sans-serif;
 
-    /* Spacing */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 2rem;
-    --space-lg: 4rem;
-    --space-xl: 8rem;
+    /* Spacing scale */
+    --space-xs:  0.5rem;
+    --space-sm:  1rem;
+    --space-md:  2rem;
+    --space-lg:  4rem;
+    --space-xl:  8rem;
     --space-2xl: 12rem;
-    --space-3xl: 16rem;
 
-    /* Transitions */
-    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    /* Easing */
+    --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
     --ease-out-quint: cubic-bezier(0.77, 0, 0.175, 1);
     --transition-fast: 0.25s ease;
-    --transition-base: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-base: 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 
-    /* Nav */
+    /* Nav height */
     --nav-height: 5rem;
 }
 
-body.is-locked {
-    overflow: hidden;
-}
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
+body.is-locked { overflow: hidden; }
 
-/* === RESET & BASE === */
 *,
 *::before,
 *::after {
@@ -229,7 +243,9 @@ body {
     overflow-x: hidden;
 }
 
-/* === SKIP LINK — first focusable, visually hidden until focused === */
+/* =========================================================
+   SKIP LINK
+   ========================================================= */
 .skip-link {
     position: fixed;
     top: 0;
@@ -240,29 +256,30 @@ body {
     background: var(--onyx);
     color: var(--porcelain);
     font-family: var(--font-accent);
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 3px 3px;
     transition: transform 0.3s var(--ease-out);
 }
 
-.skip-link:focus {
-    transform: translate(-50%, 0);
-}
+.skip-link:focus { transform: translate(-50%, 0); }
 
-/* === UTILITIES === */
+/* =========================================================
+   UTILITIES
+   ========================================================= */
 .container {
     width: 90%;
     max-width: 1440px;
     margin: 0 auto;
 }
 
+/* Scroll-reveal fade-up */
 .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    transform: translateY(36px);
+    transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out);
 }
 
 .reveal.is-visible {
@@ -270,55 +287,95 @@ body {
     transform: translateY(0);
 }
 
+/* Semantic helpers */
 .serif-italic {
     font-style: italic;
     font-family: var(--font-display);
 }
 
-.serif-display {
-    font-family: var(--font-display);
-}
+.serif-display { font-family: var(--font-display); }
 
-/* Shared eyebrow label — sage bullet + small caps label */
+/* Sage bullet used in all eyebrow labels */
 .eyebrow-dot {
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: var(--sage);
-    margin-right: 0.6em;
+    margin-right: 0.65em;
     vertical-align: middle;
     transform: translateY(-1px);
+    flex-shrink: 0;
 }
 
+/* Shared section eyebrow (used in rotate section) */
 .section-label {
     font-family: var(--font-accent);
-    font-weight: 500;
-    font-size: 0.7rem;
+    font-weight: 600;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.28em;
     color: var(--muted);
 }
 
 .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 400;
-    letter-spacing: -0.03em;
-    line-height: 1.05;
+    font-family: var(--font-primary);
+    font-size: clamp(3rem, 6.5vw, 6.5rem);
+    font-weight: 700;
+    letter-spacing: -0.065em;
+    line-height: 0.88;
 }
 
-/* === ANIMATIONS === */
+/* =========================================================
+   KEYFRAMES
+   ========================================================= */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-8px); }
+    50%       { transform: translateY(-8px); }
 }
 
 .float { animation: float 4s ease-in-out infinite; }
 
-/* ===========================================================
+@keyframes section-rise {
+    from { opacity: 0; transform: translateY(2.5rem); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Clipped text-rise — the signature topic-title motion */
+@keyframes text-rise {
+    from {
+        opacity: 0;
+        transform: translateY(38%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero image slow breathe */
+@keyframes ken-burns-hero {
+    0%   { transform: scale(1.04) translate(0, 0); }
+    100% { transform: scale(1.13) translate(-1.5%, -1%); }
+}
+
+/* Scroll indicator pulse */
+@keyframes scroll-line {
+    0%   { transform: scaleY(0); opacity: 0; }
+    40%  { transform: scaleY(1); opacity: 1; }
+    80%  { transform: scaleY(1); opacity: 0; }
+    100% { transform: scaleY(1); opacity: 0; }
+}
+
+/* Carousel slide */
+@keyframes rotate-slide {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* =========================================================
    PRE-LOADER — split wordmark + counter
-   =========================================================== */
+   ========================================================= */
 .page-loader {
     position: fixed;
     inset: 0;
@@ -376,7 +433,7 @@ body {
     font-size: clamp(0.9rem, 1.5vw, 1.25rem);
     font-variant-numeric: tabular-nums;
     color: var(--onyx);
-    opacity: 0.7;
+    opacity: 0.6;
     transition: transform 0.7s var(--ease-out-quint), opacity 0.5s ease;
 }
 
@@ -385,9 +442,9 @@ body {
     opacity: 0;
 }
 
-/* ===========================================================
-   NAVIGATION — slim top bar with hamburger (right)
-   =========================================================== */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 .nav {
     position: fixed;
     top: 0;
@@ -405,6 +462,42 @@ body.is-loaded .nav { pointer-events: auto; }
 
 body.is-menu-open .nav__inner { color: var(--porcelain); }
 
+/* Scroll-driven nav — adds a frosted porcelain backdrop as the hero scrolls out.
+   Progressive enhancement: browsers without scroll() timeline just stay transparent. */
+@supports (animation-timeline: scroll()) {
+    @keyframes nav-scroll-bg {
+        from {
+            background: transparent;
+            border-bottom-color: transparent;
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px);
+        }
+        to {
+            background: rgba(250, 248, 244, 0.94);
+            border-bottom-color: var(--border);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+    }
+
+    @keyframes nav-scroll-color {
+        from { color: var(--porcelain); }
+        to   { color: var(--onyx); }
+    }
+
+    .nav {
+        animation: nav-scroll-bg linear both;
+        animation-timeline: scroll();
+        animation-range: 55vh 100vh;
+    }
+
+    body:not(.is-menu-open) .nav__inner {
+        animation: nav-scroll-color linear both;
+        animation-timeline: scroll();
+        animation-range: 55vh 100vh;
+    }
+}
+
 .nav__inner {
     width: 90%;
     max-width: 1440px;
@@ -413,15 +506,15 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--onyx);
+    color: var(--porcelain);
     transition: color 0.4s ease;
 }
 
 .nav__logo {
     font-family: var(--font-display);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 400;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.20em;
     text-transform: uppercase;
     color: inherit;
     text-decoration: none;
@@ -445,9 +538,9 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
 
 .nav__toggle-line {
     display: block;
-    height: 0.16rem;
+    height: 0.14rem;
     background: currentColor;
-    border-radius: 2px;
+    border-radius: 0;
     transform-origin: center;
     transition: transform 0.45s var(--ease-out-quint), opacity 0.3s ease;
 }
@@ -460,9 +553,9 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
     transform: translateY(-0.38rem) rotate(-45deg);
 }
 
-/* ===========================================================
-   MENU OVERLAY — full-screen, slides up like a curtain
-   =========================================================== */
+/* =========================================================
+   MENU OVERLAY — full-screen curtain
+   ========================================================= */
 .menu {
     position: fixed;
     inset: 0;
@@ -501,7 +594,7 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: clamp(0.75rem, 1.2vw, 1.25rem);
+    gap: clamp(0.6rem, 1.1vw, 1.1rem);
 }
 
 .menu__link {
@@ -565,7 +658,7 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
 .menu__chip {
     font-family: var(--font-accent);
     font-weight: 500;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: var(--muted-light);
@@ -581,8 +674,8 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
 }
 
 .menu__chip--cta {
-    padding: 0.55rem 1.2rem;
-    border: 1px solid var(--sage);
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(124, 139, 106, 0.5);
     border-radius: 999px;
     color: var(--porcelain);
 }
@@ -595,10 +688,10 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
 
 .menu__col--media {
     background:
-        radial-gradient(circle at 20% 30%, rgba(124, 139, 106, 0.12), transparent 55%),
-        radial-gradient(circle at 80% 70%, rgba(251, 254, 249, 0.05), transparent 55%),
-        linear-gradient(135deg, var(--onyx) 0%, rgba(10, 10, 11, 0.88) 100%);
-    border: 1px solid rgba(251, 254, 249, 0.08);
+        radial-gradient(circle at 20% 30%, rgba(124, 139, 106, 0.10), transparent 55%),
+        radial-gradient(circle at 80% 70%, rgba(250, 248, 244, 0.04), transparent 55%),
+        linear-gradient(135deg, var(--onyx) 0%, rgba(12, 11, 10, 0.88) 100%);
+    border: 1px solid var(--border-light);
     aspect-ratio: 16 / 9;
     align-self: center;
     width: 100%;
@@ -612,15 +705,15 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
     content: "";
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(transparent 50%, rgba(251, 254, 249, 0.04) 50%);
+    background-image: linear-gradient(transparent 50%, rgba(250, 248, 244, 0.03) 50%);
     background-size: 100% 6px;
-    opacity: 0.35;
+    opacity: 0.4;
     mix-blend-mode: screen;
 }
 
-/* ===========================================================
-   SIDE LABELS — fixed rotating annotations (left/right edges)
-   =========================================================== */
+/* =========================================================
+   SIDE LABELS — fixed rotating annotations
+   ========================================================= */
 .side-label {
     position: fixed;
     top: 50%;
@@ -629,22 +722,18 @@ body.is-menu-open .nav__inner { color: var(--porcelain); }
     z-index: 50;
     font-family: var(--font-accent);
     font-weight: 500;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
-    color: var(--muted);
+    letter-spacing: 0.28em;
+    color: rgba(250, 248, 244, 0.4);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.6s ease 0.4s;
 }
 
-body.is-loaded .side-label { opacity: 0.6; }
+body.is-loaded .side-label { opacity: 1; }
 
-/* Right label uses the Rig face family (OTF); mirrors the left label
-   symmetrically so both sit the same distance from the page center. */
-.side-label--left {
-    left: 1.5rem;
-}
+.side-label--left { left: 1.5rem; }
 
 .side-label--right {
     right: -2rem;
@@ -654,229 +743,9 @@ body.is-loaded .side-label { opacity: 0.6; }
     letter-spacing: 0.32em;
 }
 
-/* @font-face for the side label only — OTF kept in the deep fonts folder */
-@font-face {
-    font-family: "Rig Sans";
-    src: url("Rig face family/fonts/fonnts.com-Rig_Sans_Semibold.otf") format("opentype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* ===========================================================
-   HERO SECTION — full-bleed editorial.
-   No experimental scroll-pin (that made the hero jump 100vh on load
-   in Chrome). Just a slow breathing background and centered copy.
-   =========================================================== */
-.hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: var(--onyx);
-    color: var(--porcelain);
-}
-
-.hero__media {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.hero__slot,
-.hero .hero__slot {
-    width: 100%;
-    height: 100%;
-    background: var(--onyx);
-    background-image: none;
-    border: 0;
-}
-
-/* Kill the inherited placeholder corner-mark pseudo */
-.hero__slot::after { content: none; }
-
-/* If JS later injects an <img> into the slot, the image covers the void,
-   but the underlying background must stay Onyx so letterboxing stays dark. */
-.hero__slot:has(img) { background: var(--onyx); }
-
-.hero__media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 35%;
-    filter: saturate(0.85) contrast(1.05);
-    /* Slow breathing — the only hero motion. Gated off below if reduce-motion. */
-    animation: ken-burns-hero 28s ease-in-out infinite alternate;
-}
-
-@keyframes ken-burns-hero {
-    0%   { transform: scale(1.05) translate(0, 0); }
-    100% { transform: scale(1.14) translate(-1.5%, -1%); }
-}
-
-.hero__overlay {
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(180deg,
-            rgba(10, 10, 11, 0.55) 0%,
-            rgba(10, 10, 11, 0.35) 30%,
-            rgba(10, 10, 11, 0.25) 60%,
-            rgba(10, 10, 11, 0.75) 100%
-        );
-}
-
-/* Subtle vignette + grain layer that flatters the placeholder-slot
-   look when no image is loaded yet. */
-.hero__grain {
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(ellipse at center, transparent 40%, rgba(10, 10, 11, 0.45) 100%);
-    mix-blend-mode: multiply;
-}
-
-.hero__inner {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    color: var(--porcelain);
-    padding: 0 1.5rem;
-    max-width: 56rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(1.25rem, 2.2vw, 2rem);
-}
-
-.hero__brand {
-    font-family: var(--font-display);
-    font-size: 0.78rem;
-    font-weight: 400;
-    letter-spacing: 0.38em;
-    text-transform: uppercase;
-    color: var(--sage);
-}
-
-.hero__headline { line-height: 0; }
-
-.hero__title {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 9vw, 7.5rem);
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    color: var(--porcelain);
-    margin: 0;
-    text-wrap: balance;
-}
-
-.hero__title .serif-italic {
-    color: rgba(251, 254, 249, 0.72);
-}
-
-.hero__lede {
-    font-family: var(--font-body);
-    font-size: clamp(0.95rem, 1.25vw, 1.15rem);
-    font-weight: 400;
-    line-height: 1.65;
-    color: rgba(251, 254, 249, 0.72);
-    max-width: 42ch;
-    margin: 0 auto;
-}
-
-.hero__actions {
-    display: flex;
-    gap: 0 1.5rem;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.hero .btn-primary {
-    background: var(--porcelain);
-    color: var(--onyx);
-    border-color: var(--porcelain);
-}
-
-.hero .btn-primary:hover {
-    background: var(--sage);
-    color: var(--porcelain);
-    border-color: var(--sage);
-}
-
-.hero__ghost {
-    font-family: var(--font-accent);
-    font-size: 0.72rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--porcelain);
-    text-decoration: none;
-    position: relative;
-    padding-bottom: 0.3rem;
-}
-
-.hero__ghost::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    background: var(--sage);
-    transform-origin: left;
-    transform: scaleX(0.6);
-    transition: transform 0.4s var(--ease-out);
-}
-
-.hero__ghost:hover::after {
-    transform: scaleX(1);
-}
-
-.hero__scroll {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-    color: var(--porcelain);
-}
-
-.hero__scroll span {
-    font-family: var(--font-accent);
-    font-size: 0.65rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    opacity: 0.7;
-}
-
-.hero__scroll-line {
-    width: 1px;
-    height: 32px;
-    background: var(--porcelain);
-    transform-origin: top center;
-    animation: scroll-line 2.4s var(--ease-out) infinite;
-}
-
-@keyframes scroll-line {
-    0%   { transform: scaleY(0); opacity: 0; }
-    40%  { transform: scaleY(1); opacity: 1; }
-    80%  { transform: scaleY(1); opacity: 0; }
-    100% { transform: scaleY(1); opacity: 0; }
-}
-
-/* ===========================================================
-   FILM GRAIN (whole page) — fixed canvas, blended overlay
-   =========================================================== */
+/* =========================================================
+   FILM GRAIN CANVAS — fixed page overlay
+   ========================================================= */
 canvas.grain {
     position: fixed;
     inset: 0;
@@ -885,19 +754,12 @@ canvas.grain {
     pointer-events: none;
     z-index: 9000;
     mix-blend-mode: overlay;
-    opacity: 0.08;
+    opacity: 0.09;
 }
 
-/* SCROLL PROGRESS — removed by request. No CSS here. */
-
-/* ===========================================================
-   SCROLL-REVEAL — native animation-timeline: view()
-   =========================================================== */
-@keyframes section-rise {
-    from { opacity: 0; transform: translateY(2.5rem); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
+/* =========================================================
+   SCROLL REVEAL — native animation-timeline fallback
+   ========================================================= */
 .section-anim {
     opacity: 0;
     transform: translateY(2.5rem);
@@ -911,11 +773,9 @@ canvas.grain {
     transform: translateY(0);
 }
 
-/* ===========================================================
-   MEDIA-SLOT — image placeholder system (no <img> in HTML)
-   Empty state: warm-neutral bone block, looks intentional.
-   JS injects <img> when data-src is filled.
-   =========================================================== */
+/* =========================================================
+   MEDIA SLOT — image placeholder system
+   ========================================================= */
 .media-slot {
     position: relative;
     width: 100%;
@@ -924,12 +784,12 @@ canvas.grain {
     background-image:
         repeating-linear-gradient(45deg,
             transparent 0 14px,
-            rgba(10, 10, 11, 0.04) 14px 15px);
+            rgba(12, 11, 10, 0.03) 14px 15px);
     border: 1px solid var(--border-strong);
     overflow: hidden;
 }
 
-/* Tiny corner mark so an empty slot reads as a deliberate placeholder */
+/* Corner registration mark */
 .media-slot::after {
     content: "";
     position: absolute;
@@ -939,7 +799,7 @@ canvas.grain {
     height: 10px;
     border-top: 1px solid var(--muted);
     border-left: 1px solid var(--muted);
-    opacity: 0.6;
+    opacity: 0.45;
 }
 
 .media-slot img {
@@ -949,10 +809,10 @@ canvas.grain {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: saturate(0.85) contrast(1.05);
+    filter: saturate(0.82) contrast(1.06);
 }
 
-/* Hide the placeholder hatch + corner mark once an image is injected */
+/* Clean state once image loads */
 .media-slot:has(img) {
     background-image: none;
     border-color: transparent;
@@ -960,22 +820,366 @@ canvas.grain {
 
 .media-slot:has(img)::after { content: none; }
 
-/* Tall variant — used by .topic__image */
+/* Tall variant — topic image panels */
 .media-slot--tall {
     aspect-ratio: 4 / 5;
     height: auto;
 }
 
-/* ===========================================================
-   ROTATE — auto-rotating landscape carousel.
-   Spins on its own at a medium constant speed; no scroll interaction
-   required. CSS-only. The strip contains TWO identical sets of items,
-   so when the animation translates -50% it loops seamlessly.
-   =========================================================== */
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background: var(--onyx);
+    color: var(--porcelain);
+    text-decoration: none;
+    border-radius: 0;
+    font-family: var(--font-accent);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: var(--transition-base);
+    border: 1px solid var(--onyx);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--onyx);
+}
+
+/* =========================================================
+   HERO — full-bleed cinematic cover
+   ========================================================= */
+.hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: clamp(7rem, 13vh, 10rem) 5% clamp(5rem, 10vh, 8rem);
+    background: var(--onyx);
+    color: var(--porcelain);
+    overflow: hidden;
+}
+
+/* Photography layer — restored. Styled to look atmospheric even without a photo. */
+.hero__media {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero__slot {
+    width: 100%;
+    height: 100%;
+    background: #100f0d;
+    background-image:
+        radial-gradient(ellipse 75% 70% at 72% 38%, rgba(75, 86, 64, 0.07), transparent),
+        radial-gradient(ellipse 55% 65% at 25% 72%, rgba(12, 11, 10, 0.96), transparent);
+    border: 0;
+}
+
+.hero__slot::after { content: none; }
+
+.hero__slot:has(img) { background: var(--onyx); }
+
+.hero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% center;
+    filter: saturate(0.78) contrast(1.08);
+    animation: ken-burns-hero 30s ease-in-out infinite alternate;
+}
+
+/* Left-heavy diagonal overlay — keeps type legible, opens right for photography */
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(108deg,
+            rgba(12, 11, 10, 0.88) 0%,
+            rgba(12, 11, 10, 0.60) 35%,
+            rgba(12, 11, 10, 0.22) 65%,
+            rgba(12, 11, 10, 0.50) 100%
+        );
+}
+
+/* Edge vignette */
+.hero__grain {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 38%, rgba(12, 11, 10, 0.55) 100%);
+    mix-blend-mode: multiply;
+}
+
+/* Text column — left-aligned, bottom-anchored */
+.hero__inner {
+    position: relative;
+    z-index: 3;
+    width: min(100%, 78rem);
+    max-width: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: clamp(1rem, 2.2vw, 2rem);
+}
+
+/* Cascading entrance — triggered by JS body.is-loaded */
+.hero__brand,
+.hero__headline,
+.hero__lede,
+.hero__actions {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+
+body.is-loaded .hero__brand   { opacity: 1; transform: none; transition-delay: 0.15s; }
+body.is-loaded .hero__headline { opacity: 1; transform: none; transition-delay: 0.30s; }
+body.is-loaded .hero__lede    { opacity: 1; transform: none; transition-delay: 0.50s; }
+body.is-loaded .hero__actions { opacity: 1; transform: none; transition-delay: 0.70s; }
+
+/* Brand eyebrow — thin sage rule + label */
+.hero__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85em;
+    font-family: var(--font-accent);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
+    color: var(--sage);
+}
+
+.hero__brand::before {
+    content: "";
+    display: inline-block;
+    width: 2.25rem;
+    height: 1px;
+    background: var(--sage);
+    flex-shrink: 0;
+}
+
+/* Oversized wordmark — Mosvita ExtraBold */
+.hero__headline { line-height: 0.74; }
+
+.hero__title {
+    font-family: var(--font-primary);
+    font-size: clamp(5.5rem, 15.5vw, 15rem);
+    font-weight: 800;
+    line-height: 0.76;
+    letter-spacing: -0.085em;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    color: var(--porcelain);
+    margin: 0;
+}
+
+/* CURA — Blanco italic offset right: the stagger that makes the composition */
+.hero__title .serif-italic {
+    display: inline-block;
+    margin-left: clamp(2.5rem, 12vw, 12rem);
+    font-family: var(--font-display);
+    font-size: 0.82em;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    text-transform: none;
+    color: var(--sage);
+}
+
+.hero__lede {
+    max-width: 34ch;
+    margin: clamp(0.5rem, 1.5vw, 1.25rem) 0 0;
+    font-family: var(--font-body);
+    font-size: clamp(0.92rem, 1.2vw, 1.1rem);
+    line-height: 1.65;
+    color: rgba(250, 248, 244, 0.60);
+}
+
+.hero__actions {
+    display: flex;
+    gap: 0 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 0.25rem;
+}
+
+/* Hero CTA — underline text link, no pill */
+.hero .btn-primary {
+    padding: 0.8rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--porcelain);
+    border-bottom: 1px solid rgba(250, 248, 244, 0.35);
+    transition: border-color 0.4s var(--ease-out), padding-left 0.4s var(--ease-out), color 0.4s ease;
+}
+
+.hero .btn-primary:hover {
+    padding-left: 0.6rem;
+    border-color: var(--sage);
+    background: transparent;
+    color: var(--porcelain);
+}
+
+/* Scroll indicator — right side */
+.hero__scroll {
+    position: absolute;
+    right: 5%;
+    bottom: clamp(2rem, 5vh, 4rem);
+    left: auto;
+    transform: none;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.6rem;
+    color: rgba(250, 248, 244, 0.45);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+body.is-loaded .hero__scroll { opacity: 1; transition-delay: 1.2s; }
+
+.hero__scroll span {
+    font-family: var(--font-accent);
+    font-size: 0.62rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+}
+
+.hero__scroll-line {
+    width: 1px;
+    height: 32px;
+    background: rgba(250, 248, 244, 0.45);
+    transform-origin: top center;
+    animation: scroll-line 2.4s var(--ease-out) infinite;
+}
+
+/* =========================================================
+   MANIFESTO — bold thesis sentence
+   ========================================================= */
+.manifesto {
+    padding: clamp(7rem, 16vw, 16rem) 0 clamp(5rem, 10vw, 10rem);
+    background: var(--porcelain);
+    text-align: left;
+}
+
+/* Editorial left-border on the eyebrow label */
+.manifesto__eyebrow {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-accent);
+    font-weight: 600;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--muted);
+    margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--sage);
+    gap: 0;
+}
+
+.manifesto__eyebrow .eyebrow-dot { display: none; }
+
+.manifesto__title {
+    font-family: var(--font-primary);
+    font-size: clamp(2.8rem, 7.5vw, 8.5rem);
+    font-weight: 700;
+    line-height: 0.93;
+    letter-spacing: -0.065em;
+    color: var(--onyx);
+    max-width: 14ch;
+    margin: 0;
+    text-wrap: balance;
+}
+
+.manifesto__title .serif-italic {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--sage-deep);
+    letter-spacing: -0.04em;
+}
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+.about {
+    padding: clamp(5rem, 12vw, 11rem) 0;
+    background: var(--porcelain);
+    border-top: 1px solid var(--border);
+    text-align: left;
+}
+
+.about .container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    column-gap: clamp(2rem, 8vw, 10rem);
+    row-gap: 2rem;
+    align-items: start;
+}
+
+.about__eyebrow {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-accent);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.about h2 {
+    grid-column: 1;
+    max-width: 9ch;
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: clamp(3rem, 6.5vw, 6.5rem);
+    font-weight: 700;
+    line-height: 0.88;
+    letter-spacing: -0.075em;
+    color: var(--onyx);
+    text-align: left;
+}
+
+.about__body {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    max-width: 44rem;
+    padding-top: clamp(0.5rem, 2vw, 1.25rem);
+}
+
+.about p {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.35vw, 1.25rem);
+    line-height: 1.70;
+    color: var(--onyx);
+    max-width: 46ch;
+    margin: 0 0 1.4rem;
+}
+
+/* =========================================================
+   ROTATE — auto-scrolling coverage carousel
+   ========================================================= */
 .rotate {
     position: relative;
-    padding: clamp(4rem, 9vw, 9rem) 0;
-    background: var(--porcelain);
+    padding: clamp(5rem, 10vw, 10rem) 0;
+    background: var(--onyx);
+    color: var(--porcelain);
     overflow: hidden;
 }
 
@@ -990,222 +1194,159 @@ canvas.grain {
     gap: 1rem;
 }
 
+.rotate .section-label {
+    color: rgba(250, 248, 244, 0.48);
+}
+
+.rotate .section-title {
+    color: var(--porcelain);
+    max-width: 11ch;
+}
+
+.rotate .section-title .serif-italic {
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--sage);
+    letter-spacing: -0.04em;
+}
+
 .rotate__viewport {
     position: relative;
     width: 100%;
     overflow: hidden;
-    /* Pleasant landscape height — always visible, never needs scroll. */
-    height: clamp(280px, 50vh, 480px);
-    /* Fade the edges of the strip so items slide in/out gently. */
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, var(--onyx) 6%, var(--onyx) 94%, transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0%, var(--onyx) 6%, var(--onyx) 94%, transparent 100%);
+    height: clamp(260px, 46vw, 440px);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 
 .rotate__strip {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.25rem;
     height: 100%;
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
     width: max-content;
     align-items: center;
     will-change: transform;
-    animation: rotate-slide 48s linear infinite;
+    animation: rotate-slide 50s linear infinite;
 }
 
 .rotate:hover .rotate__strip {
     animation-play-state: paused;
 }
 
-@keyframes rotate-slide {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-}
-
 .rotate__item {
     position: relative;
     flex: 0 0 auto;
-    /* Landscape orientation — wider than tall. */
-    width: clamp(360px, 44vw, 640px);
+    width: clamp(340px, 42vw, 600px);
     aspect-ratio: 16 / 10;
     overflow: hidden;
-    background: var(--bone);
+    background: rgba(250, 248, 244, 0.05);
+    border: 1px solid rgba(250, 248, 244, 0.07);
 }
 
 .rotate__item .media-slot {
     height: 100%;
+    background-color: rgba(250, 248, 244, 0.04);
+    background-image: repeating-linear-gradient(45deg, transparent 0 14px, rgba(250, 248, 244, 0.03) 14px 15px);
+    border-color: rgba(250, 248, 244, 0.10);
+}
+
+.rotate__item .media-slot::after {
+    border-color: rgba(250, 248, 244, 0.38);
 }
 
 .rotate__item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(0.85) contrast(1.05);
+    filter: saturate(0.82) contrast(1.06);
 }
 
 .rotate__item figcaption {
     position: absolute;
-    left: 1rem;
-    bottom: 1rem;
+    left: 1.25rem;
+    bottom: 1.25rem;
     z-index: 2;
     font-family: var(--font-accent);
-    font-weight: 500;
-    font-size: 0.7rem;
+    font-weight: 600;
+    font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--porcelain);
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+    letter-spacing: 0.28em;
+    color: rgba(250, 248, 244, 0.65);
 }
 
-/* === BUTTONS === */
-.btn-primary {
-    display: inline-block;
-    padding: 0.9rem 2.5rem;
-    background: var(--onyx);
-    color: var(--porcelain);
-    text-decoration: none;
-    border-radius: 100px;
-    font-family: var(--font-accent);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: var(--transition-base);
-    border: 1px solid var(--onyx);
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background: transparent;
-    color: var(--onyx);
-}
-
-/* ===========================================================
-   MANIFESTO — one bold sentence, lots of negative space
-   =========================================================== */
-.manifesto {
-    padding: clamp(6rem, 14vw, 14rem) 0;
-    background: var(--porcelain);
-    text-align: left;
-}
-
-.manifesto__eyebrow {
-    font-family: var(--font-accent);
-    font-weight: 500;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    color: var(--muted);
-    margin-bottom: 2rem;
-}
-
-.manifesto__title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 6vw, 5.5rem);
-    font-weight: 400;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    color: var(--onyx);
-    max-width: 18ch;
-    margin: 0;
-    text-wrap: balance;
-}
-
-.manifesto__title .serif-italic {
-    color: var(--sage-deep);
-}
-
-/* ===========================================================
-   ABOUT SECTION
-   =========================================================== */
-.about {
-    padding: var(--space-3xl) 0;
-    background: var(--porcelain);
-    text-align: center;
-}
-
-.about h2 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    line-height: 1.1;
-    margin-bottom: var(--space-md);
-    color: var(--onyx);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about p {
-    font-family: var(--font-body);
-    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
-    line-height: 1.8;
-    color: var(--muted);
-    max-width: 520px;
-    margin: 0 auto var(--space-sm);
-}
-
-/* ===========================================================
-   TOPIC — full-screen editorial section (Training, Nutrition,
-   Health, Daily Care). The new core structural unit.
-   =========================================================== */
+/* =========================================================
+   TOPIC SECTIONS — editorial field-journal spreads
+   Each topic: sticky left label, scrolling right content.
+   ========================================================= */
 .topic {
-    padding: var(--space-3xl) 0;
+    padding: clamp(6rem, 12vw, 12rem) 0;
     background: var(--porcelain);
+    border-top: 1px solid var(--border);
     position: relative;
 }
 
-/* 
+/* Dark variant — Nutrition and Daily Care */
+.topic--dark {
+    background: var(--onyx);
     color: var(--porcelain);
+    border-top-color: var(--border-light);
 }
-*/
 
 .topic__layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(2rem, 5vw, 5rem) clamp(3rem, 8vw, 8rem);
+    grid-template-columns: 0.72fr 1.28fr;
+    column-gap: clamp(3rem, 8vw, 10rem);
+    row-gap: clamp(2rem, 4vw, 3.5rem);
     align-items: start;
 }
 
+/* Left column: sticky label + title + subtitle */
 .topic__intro {
-    grid-column: 1 / -1;
+    grid-column: 1;
+    grid-row: 1 / span 2;  /* spans both body + points rows */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: var(--space-lg);
+    gap: 1.75rem;
+    margin: 0;
+    position: sticky;
+    top: calc(var(--nav-height) + 2rem);
+    align-self: start;
 }
 
 .topic__eyebrow {
+    display: flex;
+    align-items: center;
     font-family: var(--font-accent);
-    font-weight: 500;
-    font-size: 0.72rem;
+    font-weight: 600;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.28em;
     color: var(--muted);
 }
 
+.topic--dark .topic__eyebrow { color: var(--muted-light); }
+
 .topic__title {
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 7vw, 6rem);
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: -0.03em;
+    font-family: var(--font-primary);
+    font-size: clamp(3.25rem, 7.5vw, 8rem);
+    font-weight: 700;
+    line-height: 0.86;
+    letter-spacing: -0.08em;
     color: var(--onyx);
     margin: 0;
     text-wrap: balance;
-}
-
-/* text-rise — the signature section-title motion.
-   The parent .topic__title clips the inner span, which rises out
-   of its own box on reveal. NO ::after clone needed — that caused
-   the doubled-heading bug. */
-.topic__title {
     overflow: visible;
 }
 
+.topic--dark .topic__title { color: var(--porcelain); }
+
+/* Text-rise animation — starts invisible, revealed on scroll-trigger.
+   Reduced-motion block forces opacity:1 !important as safety fallback. */
 .topic__title-inner {
     display: inline-block;
+    opacity: 0;
+    transform: translateY(36%);
 }
 
 .topic__intro.is-visible .topic__title-inner,
@@ -1213,28 +1354,27 @@ canvas.grain {
     animation: text-rise 1s var(--ease-out) both;
 }
 
-@keyframes text-rise {
-    from { transform: translateY(40%); opacity: 0; }
-    to   { transform: translateY(0); opacity: 1; }
-}
-
 .topic__sub {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+    font-size: clamp(1rem, 1.45vw, 1.35rem);
     font-weight: 400;
     color: var(--sage-deep);
     letter-spacing: -0.01em;
-    max-width: 36ch;
+    line-height: 1.45;
+    max-width: 28ch;
 }
 
+.topic--dark .topic__sub { color: var(--sage); }
+
+/* Right column: copy + image */
 .topic__body {
-    grid-column: 1 / -1;
+    grid-column: 2;
+    grid-row: 1;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: clamp(2rem, 5vw, 5rem);
-    align-items: start;
-    margin-bottom: var(--space-lg);
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+    margin: 0;
 }
 
 .topic__copy {
@@ -1245,36 +1385,59 @@ canvas.grain {
 
 .topic__copy p {
     font-family: var(--font-body);
-    font-size: clamp(1rem, 1.15vw, 1.2rem);
-    line-height: 1.7;
+    font-size: clamp(1rem, 1.25vw, 1.2rem);
+    line-height: 1.75;
     color: var(--onyx);
     max-width: 42ch;
 }
 
+.topic--dark .topic__copy p { color: rgba(250, 248, 244, 0.75); }
+
 .topic__image {
     aspect-ratio: 4 / 5;
-    min-height: 320px;
+    height: auto;
+    max-width: 32rem;
 }
 
+/* Dark variant image placeholder */
+.topic--dark .topic__image .media-slot {
+    background-color: rgba(250, 248, 244, 0.05);
+    background-image: repeating-linear-gradient(45deg, transparent 0 14px, rgba(250, 248, 244, 0.03) 14px 15px);
+    border-color: rgba(250, 248, 244, 0.09);
+}
+
+.topic--dark .topic__image .media-slot::after {
+    border-color: rgba(250, 248, 244, 0.38);
+}
+
+/* Right column: key points list — editorial rows with hairline separators */
 .topic__points {
-    grid-column: 1 / -1;
+    grid-column: 2;
+    grid-row: 2;
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     padding: 0;
     margin: 0;
     border-top: 1px solid var(--border);
-    padding-top: var(--space-md);
 }
+
+.topic--dark .topic__points { border-top-color: var(--border-light); }
 
 .topic__points li {
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: clamp(0.88rem, 1.05vw, 0.98rem);
     color: var(--muted);
-    line-height: 1.5;
-    padding-left: 1.4rem;
+    line-height: 1.55;
+    padding: 0.9rem 0 0.9rem 1.5rem;
     position: relative;
+    border-bottom: 1px solid var(--border);
+}
+
+.topic--dark .topic__points li {
+    color: rgba(250, 248, 244, 0.50);
+    border-bottom-color: var(--border-light);
 }
 
 .topic__points li::before {
@@ -1282,14 +1445,85 @@ canvas.grain {
     position: absolute;
     left: 0;
     color: var(--sage);
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-/* ===========================================================
+/* =========================================================
+   PHOTO BREAK — cinematic full-bleed breather
+   ========================================================= */
+.photo-break {
+    position: relative;
+    min-height: clamp(30rem, 65vh, 52rem);
+    overflow: hidden;
+    background: var(--onyx);
+    color: var(--porcelain);
+}
+
+.photo-break figure {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Dark slot — atmospheric even without an image */
+.photo-break__slot,
+.photo-break .photo-break__slot {
+    width: 100%;
+    height: 100%;
+    background: #0f0e0c;
+    background-image:
+        radial-gradient(ellipse 80% 70% at 72% 42%, rgba(75, 86, 64, 0.05), transparent);
+    border: 0;
+}
+
+.photo-break__slot::after { content: none; }
+
+.photo-break__slot:has(img) { background: var(--onyx); }
+
+.photo-break__slot img {
+    filter: saturate(0.78) contrast(1.08);
+}
+
+/* Left-side overlay — text legibility on the left, open right for the photo */
+.photo-break__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(100deg,
+            rgba(12, 11, 10, 0.90) 0%,
+            rgba(12, 11, 10, 0.58) 38%,
+            rgba(12, 11, 10, 0.18) 72%,
+            rgba(12, 11, 10, 0.50) 100%
+        );
+}
+
+.photo-break figcaption {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 10%;
+}
+
+/* Large Blanco italic quote */
+.photo-break__quote {
+    max-width: 13ch;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 7.5rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    color: var(--porcelain);
+    font-style: italic;
+}
+
+/* =========================================================
    CONTACT SECTION
-   =========================================================== */
+   ========================================================= */
 .contact {
-    padding: var(--space-3xl) 0;
+    padding: clamp(6rem, 14vw, 14rem) 0;
     background: var(--onyx);
     color: var(--porcelain);
 }
@@ -1306,13 +1540,15 @@ canvas.grain {
 }
 
 .contact__eyebrow {
+    display: flex;
+    align-items: center;
     font-family: var(--font-accent);
-    font-weight: 500;
-    font-size: 0.72rem;
+    font-weight: 600;
+    font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.28em;
     color: var(--muted-light);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .contact__title {
@@ -1320,17 +1556,17 @@ canvas.grain {
     font-size: clamp(2.75rem, 6vw, 5.5rem);
     font-weight: 400;
     letter-spacing: -0.03em;
-    line-height: 1;
-    margin: 0 0 1.5rem;
+    line-height: 1.0;
+    margin: 0 0 1.75rem;
     color: var(--porcelain);
 }
 
 .contact__copy {
     font-family: var(--font-body);
     font-size: clamp(0.95rem, 1.2vw, 1.1rem);
-    line-height: 1.7;
-    color: rgba(251, 254, 249, 0.6);
-    max-width: 36ch;
+    line-height: 1.70;
+    color: rgba(250, 248, 244, 0.58);
+    max-width: 38ch;
     margin: 0 0 0.75rem;
 }
 
@@ -1342,7 +1578,7 @@ canvas.grain {
     text-decoration: underline;
     text-underline-offset: 0.3em;
     text-decoration-thickness: 1px;
-    text-decoration-color: rgba(251, 254, 249, 0.4);
+    text-decoration-color: rgba(250, 248, 244, 0.35);
     transition: text-decoration-color 0.3s ease;
 }
 
@@ -1350,25 +1586,24 @@ canvas.grain {
     text-decoration-color: var(--sage);
 }
 
+/* Contact form */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.75rem;
 }
 
-.form-group {
-    position: relative;
-}
+.form-group { position: relative; }
 
 .form-group label {
     display: block;
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 500;
+    font-family: var(--font-accent);
+    font-size: 0.68rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: rgba(251, 254, 249, 0.45);
-    margin-bottom: 0.6rem;
+    letter-spacing: 0.22em;
+    color: rgba(250, 248, 244, 0.42);
+    margin-bottom: 0.65rem;
 }
 
 .form-group input,
@@ -1376,7 +1611,7 @@ canvas.grain {
     width: 100%;
     padding: 0.75rem 0;
     border: 0;
-    border-bottom: 1px solid rgba(251, 254, 249, 0.2);
+    border-bottom: 1px solid rgba(250, 248, 244, 0.18);
     background: transparent;
     color: var(--porcelain);
     font-family: var(--font-body);
@@ -1395,19 +1630,21 @@ canvas.grain {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: rgba(251, 254, 249, 0.3);
+    color: rgba(250, 248, 244, 0.28);
     font-style: italic;
 }
 
+/* Submit button */
 .btn-submit {
     align-self: flex-start;
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.65rem;
     padding: 0.95rem 2rem;
     background: var(--porcelain);
     color: var(--onyx);
     border-color: var(--porcelain);
+    border-radius: 0;
 }
 
 .btn-submit:hover {
@@ -1416,20 +1653,18 @@ canvas.grain {
 }
 
 .btn-submit svg {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.15rem;
+    height: 1.15rem;
     transition: transform 0.4s var(--ease-out);
 }
 
-.btn-submit:hover svg {
-    transform: translateX(6px);
-}
+.btn-submit:hover svg { transform: translateX(6px); }
 
-/* Inline success state — JS toggles .is-success and sets textContent */
+/* Inline success message */
 .contact-form__status {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
     color: var(--sage);
     margin: 0;
     opacity: 0;
@@ -1442,12 +1677,13 @@ canvas.grain {
     transform: translateY(0);
 }
 
-/* ===========================================================
-   FOOTER (letsplayfight-inspired)
-   =========================================================== */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .footer {
     background: var(--onyx);
     color: var(--porcelain);
+    border-top: 1px solid var(--border-light);
 }
 
 .footer__bottom {
@@ -1462,7 +1698,7 @@ canvas.grain {
     margin-bottom: var(--space-xl);
 }
 
-/* The signature "Let's chat." hover-swap link */
+/* Signature hover-swap contact link */
 .footer-phone-link {
     position: relative;
     display: inline-flex;
@@ -1482,7 +1718,7 @@ canvas.grain {
 
 .footer-phone-icon {
     font-size: 0.9em;
-    opacity: 0.7;
+    opacity: 0.65;
     transition: transform 0.4s var(--ease-out-quint);
 }
 
@@ -1533,7 +1769,7 @@ canvas.grain {
     font-family: var(--font-display);
     font-size: 0.95rem;
     font-weight: 400;
-    color: rgba(251, 254, 249, 0.7);
+    color: rgba(250, 248, 244, 0.65);
     letter-spacing: -0.01em;
 }
 
@@ -1541,7 +1777,7 @@ canvas.grain {
     display: flex;
     align-items: center;
     gap: 1rem;
-    border-bottom: 1px solid rgba(251, 254, 249, 0.35);
+    border-bottom: 1px solid rgba(250, 248, 244, 0.28);
     padding-bottom: 0.6rem;
     transition: border-color 0.3s ease;
 }
@@ -1562,7 +1798,7 @@ canvas.grain {
 }
 
 .footer__nl-input input::placeholder {
-    color: rgba(251, 254, 249, 0.35);
+    color: rgba(250, 248, 244, 0.32);
 }
 
 .footer__nl-input button {
@@ -1574,9 +1810,7 @@ canvas.grain {
     transition: transform 0.3s var(--ease-out-quint);
 }
 
-.footer__nl-input button:hover {
-    transform: translateX(4px);
-}
+.footer__nl-input button:hover { transform: translateX(4px); }
 
 .footer__nl-input button svg {
     width: 1.4rem;
@@ -1589,15 +1823,15 @@ canvas.grain {
     justify-content: space-between;
     align-items: center;
     padding-top: var(--space-md);
-    border-top: 1px solid rgba(251, 254, 249, 0.1);
+    border-top: 1px solid rgba(250, 248, 244, 0.08);
     flex-wrap: wrap;
     gap: 1rem;
 }
 
 .footer__legal p {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    color: rgba(251, 254, 249, 0.35);
+    font-size: 0.75rem;
+    color: rgba(250, 248, 244, 0.32);
     letter-spacing: 0.02em;
 }
 
@@ -1608,50 +1842,37 @@ canvas.grain {
 
 .footer__legal-links a {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    color: rgba(251, 254, 249, 0.35);
+    font-size: 0.75rem;
+    color: rgba(250, 248, 244, 0.32);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.footer__legal-links a:hover {
-    color: var(--sage);
-}
+.footer__legal-links a:hover { color: var(--sage); }
 
-/* === HIGHLIGHT === */
-.highlight {
-    color: var(--onyx);
-    opacity: 0.4;
-}
-
-/* ===========================================================
-   UI POLISH — scrollbar, selection, focus
-   =========================================================== */
+/* =========================================================
+   UI POLISH
+   ========================================================= */
 ::selection {
     background: var(--sage);
     color: var(--porcelain);
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-::-webkit-scrollbar-track {
-    background: var(--porcelain);
-}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--porcelain); }
 ::-webkit-scrollbar-thumb {
     background: var(--border-strong);
-    border: 3px solid var(--porcelain);
+    border: 2px solid var(--porcelain);
     border-radius: 999px;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(10, 10, 11, 0.3);
-}
+::-webkit-scrollbar-thumb:hover { background: rgba(12, 11, 10, 0.28); }
+
 * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(10, 10, 11, 0.25) var(--porcelain);
+    scrollbar-color: rgba(12, 11, 10, 0.22) var(--porcelain);
 }
 
+/* Focus rings */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -1671,10 +1892,9 @@ textarea:focus-visible,
     outline-color: var(--sage);
 }
 
-/* ===========================================================
-   MAGNETIC HOVER — buttons & nav links get pulled toward cursor.
-   JS reads [data-magnetic] and translates the element.
-   =========================================================== */
+/* =========================================================
+   MAGNETIC HOVER
+   ========================================================= */
 [data-magnetic] {
     transition: transform 0.4s var(--ease-out);
     will-change: transform;
@@ -1684,417 +1904,24 @@ textarea:focus-visible,
     [data-magnetic] { transition: none; }
 }
 
-/* ===========================================================
-   RESPONSIVE
-   =========================================================== */
+/* =========================================================
+   RESPONSIVE — 900 px
+   ========================================================= */
 @media (max-width: 900px) {
-    .menu__inner {
-        grid-template-columns: 1fr;
-    }
+    /* Menu */
+    .menu__inner { grid-template-columns: 1fr; }
     .menu__col--media { display: none; }
+
+    /* Footer */
     .footer__row {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
     }
+
+    /* Side labels */
     .side-label { display: none; }
 
-    .topic__layout {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
-    }
-    .topic__body {
-        grid-template-columns: 1fr;
-    }
-    .topic__image {
-        aspect-ratio: 4 / 3;
-        min-height: 240px;
-    }
-
-    .rotate__viewport { height: clamp(220px, 38vh, 320px); }
-    .rotate__strip {
-        /* Slightly faster on mobile to feel lively without lingering. */
-        animation-duration: 36s;
-    }
-    .rotate__item {
-        width: clamp(280px, 70vw, 360px);
-    }
-
-    .contact .container {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero__title {
-        font-size: clamp(2.25rem, 13vw, 4rem);
-    }
-    .topic__points {
-        grid-template-columns: 1fr;
-    }
-    .manifesto__title {
-        font-size: clamp(1.75rem, 8vw, 3rem);
-    }
-}
-
-/* ===========================================================
-   REDUCED MOTION — disable all the signature animations
-   =========================================================== */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-        scroll-behavior: auto !important;
-    }
-
-    .hero__media img,
-    .rotate__strip,
-    .section-anim,
-    .topic__title-inner,
-    .reveal {
-        animation: none !important;
-        transform: none !important;
-        opacity: 1 !important;
-    }
-
-    [data-magnetic] { transform: none !important; }
-    canvas.grain { display: none; }
-}
-
-/* ===========================================================
-   V2 MAIN REBUILD — field-journal / sports-editorial direction.
-   Scope intentionally stops before the menu and footer.
-   =========================================================== */
-
-/* Cover: a pure Onyx typographic opening. The media slot remains in
-   the markup for future art direction, but does not make an empty hero
-   look like an unfinished image placeholder. */
-.hero {
-    min-height: 100svh;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: clamp(7rem, 13vh, 10rem) 5% clamp(4rem, 8vh, 7rem);
-    background: var(--onyx);
-}
-
-.hero__media,
-.hero__overlay,
-.hero__grain {
-    display: none;
-}
-
-.hero__inner {
-    width: min(100%, 72rem);
-    max-width: none;
-    padding: 0;
-    align-items: flex-start;
-    text-align: left;
-    gap: clamp(1.1rem, 2.2vw, 2rem);
-}
-
-.hero__brand {
-    font-family: var(--font-accent);
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.28em;
-    color: var(--sage);
-}
-
-.hero__headline {
-    line-height: 0.74;
-}
-
-.hero__title {
-    font-family: var(--font-primary);
-    font-size: clamp(5rem, 15.5vw, 14rem);
-    font-weight: 800;
-    line-height: 0.76;
-    letter-spacing: -0.085em;
-    text-transform: uppercase;
-    text-wrap: nowrap;
-}
-
-.hero__title .serif-italic {
-    display: inline-block;
-    margin-left: clamp(2rem, 12vw, 11rem);
-    font-family: "Blanco", Georgia, serif;
-    font-size: 0.82em;
-    font-weight: 400;
-    letter-spacing: -0.06em;
-    color: var(--sage);
-}
-
-.hero__lede {
-    max-width: 34ch;
-    margin: clamp(0.75rem, 2vw, 1.75rem) 0 0;
-    font-size: clamp(0.95rem, 1.25vw, 1.15rem);
-    color: rgba(251, 254, 249, 0.62);
-}
-
-.hero__actions {
-    justify-content: flex-start;
-    margin-top: 0.5rem;
-}
-
-.hero .btn-primary {
-    padding: 0.85rem 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    color: var(--porcelain);
-    border-bottom: 1px solid var(--sage);
-}
-
-.hero .btn-primary:hover {
-    padding-left: 0.75rem;
-    background: transparent;
-    border-color: var(--porcelain);
-    color: var(--porcelain);
-}
-
-.hero__scroll {
-    right: 5%;
-    left: auto;
-    bottom: clamp(2rem, 5vh, 4rem);
-    transform: none;
-    align-items: flex-end;
-}
-
-/* Main type: structural Mosvita for statements, Blanco only for emphasis. */
-.manifesto {
-    padding: clamp(7rem, 16vw, 15rem) 0 clamp(5rem, 10vw, 10rem);
-}
-
-.manifesto__title {
-    max-width: 15ch;
-    font-family: var(--font-primary);
-    font-size: clamp(2.8rem, 7vw, 7.5rem);
-    font-weight: 700;
-    line-height: 0.95;
-    letter-spacing: -0.065em;
-}
-
-.manifesto__title .serif-italic {
-    font-family: "Blanco", Georgia, serif;
-    font-weight: 400;
-    color: var(--sage-deep);
-}
-
-.about {
-    padding: clamp(5rem, 12vw, 11rem) 0;
-    border-top: 1px solid var(--border);
-    text-align: left;
-}
-
-.about .container {
-    display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-    column-gap: clamp(2rem, 8vw, 10rem);
-    row-gap: 1.5rem;
-    align-items: start;
-}
-
-.about__eyebrow {
-    grid-column: 1;
-    font-family: var(--font-accent);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
-.about h2 {
-    grid-column: 1;
-    max-width: 9ch;
-    margin: 0;
-    font-family: var(--font-primary);
-    font-size: clamp(3rem, 6vw, 6rem);
-    font-weight: 700;
-    line-height: 0.9;
-    letter-spacing: -0.07em;
-}
-
-.about__body {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    max-width: 42rem;
-    padding-top: clamp(0.5rem, 2vw, 1.5rem);
-}
-
-.about p {
-    max-width: 46ch;
-    margin: 0 0 1.35rem;
-    font-size: clamp(1rem, 1.35vw, 1.25rem);
-    line-height: 1.65;
-    color: var(--onyx);
-}
-
-/* Coverage rail becomes a dark field-note index rather than another
-   pale block; its final impact will arrive with the editorial images. */
-.rotate {
-    padding: clamp(5rem, 10vw, 10rem) 0;
-    background: var(--onyx);
-    color: var(--porcelain);
-}
-
-.rotate .section-label {
-    color: rgba(251, 254, 249, 0.5);
-}
-
-.rotate .section-title {
-    max-width: 11ch;
-    font-family: var(--font-primary);
-    font-size: clamp(3rem, 6vw, 6.5rem);
-    font-weight: 700;
-    line-height: 0.9;
-    letter-spacing: -0.065em;
-}
-
-.rotate .section-title .serif-italic {
-    font-family: "Blanco", Georgia, serif;
-    font-weight: 400;
-    color: var(--sage);
-}
-
-.rotate__viewport {
-    height: clamp(250px, 42vw, 420px);
-    -webkit-mask-image: linear-gradient(90deg, transparent, var(--onyx) 5%, var(--onyx) 95%, transparent);
-    mask-image: linear-gradient(90deg, transparent, var(--onyx) 5%, var(--onyx) 95%, transparent);
-}
-
-.rotate__item {
-    width: clamp(340px, 42vw, 600px);
-    background: rgba(251, 254, 249, 0.08);
-}
-
-.rotate__item .media-slot {
-    background-color: rgba(251, 254, 249, 0.09);
-    background-image: repeating-linear-gradient(45deg, transparent 0 14px, rgba(251, 254, 249, 0.06) 14px 15px);
-    border-color: rgba(251, 254, 249, 0.16);
-}
-
-.rotate__item .media-slot::after {
-    border-color: rgba(251, 254, 249, 0.55);
-}
-
-/* Topic pages act like alternate field-journal spreads. */
-.topic {
-    padding: clamp(6rem, 12vw, 12rem) 0;
-    border-top: 1px solid var(--border);
-}
-
-.topic__layout {
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: clamp(3rem, 8vw, 10rem);
-}
-
-.topic__intro {
-    grid-column: 1;
-    margin: 0;
-    position: sticky;
-    top: calc(var(--nav-height) + 2rem);
-}
-
-.topic__title {
-    font-family: var(--font-primary);
-    font-size: clamp(3.25rem, 7vw, 7.5rem);
-    font-weight: 700;
-    line-height: 0.86;
-    letter-spacing: -0.08em;
-}
-
-.topic__sub {
-    font-family: "Blanco", Georgia, serif;
-    color: var(--sage-deep);
-}
-
-.topic__body,
-.topic__points {
-    grid-column: 2;
-}
-
-.topic__body {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin: 0;
-}
-
-.topic__copy p {
-    max-width: 39ch;
-    font-size: clamp(1rem, 1.25vw, 1.2rem);
-}
-
-.topic__image {
-    max-width: 32rem;
-    justify-self: end;
-}
-
-.topic__points {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 2.5rem;
-}
-
-/* The photo break is a real visual interval once its image arrives;
-   for now the quiet Onyx fallback still composes the quote. */
-.photo-break {
-    position: relative;
-    min-height: clamp(28rem, 65vh, 48rem);
-    overflow: hidden;
-    background: var(--onyx);
-    color: var(--porcelain);
-}
-
-.photo-break figure,
-.photo-break__slot {
-    width: 100%;
-    height: 100%;
-}
-
-.photo-break figure {
-    position: absolute;
-    inset: 0;
-}
-
-.photo-break__slot,
-.photo-break .photo-break__slot {
-    background: var(--onyx);
-    background-image: none;
-    border: 0;
-}
-
-.photo-break__slot::after { content: none; }
-
-.photo-break__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(10, 10, 11, 0.8), rgba(10, 10, 11, 0.12) 70%, rgba(10, 10, 11, 0.55));
-}
-
-.photo-break figcaption {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    padding: 10%;
-}
-
-.photo-break__quote {
-    max-width: 12ch;
-    font-family: "Blanco", Georgia, serif;
-    font-size: clamp(2.5rem, 6vw, 6rem);
-    font-weight: 400;
-    line-height: 0.95;
-    letter-spacing: -0.05em;
-}
-
-@media (max-width: 900px) {
+    /* Hero */
     .hero {
         padding-left: 5%;
         padding-right: 5%;
@@ -2108,41 +1935,120 @@ textarea:focus-visible,
         margin-left: clamp(1rem, 8vw, 4rem);
     }
 
-    .about .container,
-    .topic__layout {
+    /* About */
+    .about .container {
         grid-template-columns: 1fr;
     }
 
-    .about__body,
-    .about h2,
-    .about__eyebrow,
-    .topic__intro,
-    .topic__body,
-    .topic__points {
+    .about__eyebrow { grid-column: 1; }
+    .about h2 { grid-column: 1; }
+
+    .about__body {
         grid-column: 1;
         grid-row: auto;
     }
 
+    /* Topics */
+    .topic__layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
     .topic__intro {
+        grid-column: 1;
+        grid-row: 1;
         position: static;
+        align-self: auto;
+    }
+
+    .topic__body {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .topic__points {
+        grid-column: 1;
+        grid-row: 3;
     }
 
     .topic__image {
-        justify-self: stretch;
+        aspect-ratio: 4 / 3;
         max-width: none;
+        min-height: 240px;
+    }
+
+    /* Carousel */
+    .rotate__viewport { height: clamp(220px, 38vh, 320px); }
+    .rotate__strip { animation-duration: 38s; }
+    .rotate__item { width: clamp(280px, 70vw, 380px); }
+
+    /* Contact */
+    .contact .container {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
     }
 }
 
+/* =========================================================
+   RESPONSIVE — 768 px
+   ========================================================= */
+/* RESPONSIVE — 768 px */
+@media (max-width: 768px) {
+    .hero__title { font-size: clamp(2.25rem, 13vw, 4rem); }
+    .manifesto__title { font-size: clamp(1.75rem, 8.5vw, 3rem); }
+    .topic__points {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — 560 px
+   ========================================================= */
 @media (max-width: 560px) {
+    .hero__scroll { display: none; }
+    .hero__title { font-size: clamp(3.5rem, 20vw, 5.5rem); }
+    .rotate__item { width: 78vw; }
+}
+
+/* =========================================================
+   REDUCED MOTION — disable all signature animations
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Ensure elements are visible without animation */
+    .hero__media img,
+    .rotate__strip,
+    .section-anim,
+    .topic__title-inner,
+    .reveal,
+    .hero__brand,
+    .hero__headline,
+    .hero__lede,
+    .hero__actions,
     .hero__scroll {
-        display: none;
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
     }
 
-    .hero__title {
-        font-size: clamp(3.5rem, 20vw, 5.5rem);
+    body.is-loaded .hero__brand,
+    body.is-loaded .hero__headline,
+    body.is-loaded .hero__lede,
+    body.is-loaded .hero__actions,
+    body.is-loaded .hero__scroll {
+        opacity: 1 !important;
+        transform: none !important;
     }
 
-    .rotate__item {
-        width: 78vw;
-    }
+    [data-magnetic] { transform: none !important; }
+    canvas.grain { display: none; }
 }
