@@ -257,11 +257,15 @@
       const src = (slot.dataset.src || "").trim();
       if (!src) return;
       const alt = (slot.dataset.alt || "").trim();
+      const isHero = slot.classList.contains("hero__slot");
 
       const img = new Image();
       img.alt = alt;
       img.decoding = "async";
-      img.loading = "lazy";
+      // The hero image is the LCP candidate — load it eagerly and at high
+      // priority. Every other slot stays lazy since it's below the fold.
+      img.loading = isHero ? "eager" : "lazy";
+      if (isHero) img.fetchPriority = "high";
       img.addEventListener("load", () => {
         slot.appendChild(img);
       }, { once: true });
